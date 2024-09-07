@@ -15,7 +15,6 @@ ThemeData dark({Color color = const Color(0xFF2683EB)}) => ThemeData(
   dividerColor: AppColors.dividerColor,
   shadowColor: AppColors.shadowColor,
   canvasColor: AppColors.bottomBarColor,
-
   inputDecorationTheme: InputDecorationTheme(
     filled: true,
     fillColor: AppColors.fillColor,
