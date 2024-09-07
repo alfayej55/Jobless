@@ -108,7 +108,7 @@ class _BottomMenuState extends State<BottomMenu> {
 
 
   Color colorByIndex(ThemeData theme, int index) {
-    return index == widget.menuIndex ? AppColors.primaryColor : Colors.white;
+    return index == widget.menuIndex ? Colors.white : Color(0xffC4D3F6);
   }
 
   BottomBarItem getItem(
@@ -144,7 +144,9 @@ class _BottomMenuState extends State<BottomMenu> {
     return AnimatedNotchBottomBar(
       notchColor: Get.theme.primaryColor,
       bottomBarItems: menuItems,
-      color: theme.primaryColor,
+      color: Get.theme.primaryColor,
+      bottomBarWidth: double.infinity,
+      circleMargin: 5,
       showLabel: true,
       onTap: (value) {
         print("Page Change>>$value");
@@ -160,7 +162,7 @@ class _BottomMenuState extends State<BottomMenu> {
             break;
         }
       },
-      itemLabelStyle: AppStyles.customSize(size: 12,color: Colors.white),
+      itemLabelStyle: AppStyles.customSize(size: 12,color: Color(0xffC4D3F6)),
       kIconSize: 23.0,
       kBottomRadius: 10.0,
       notchBottomBarController: _controller,
