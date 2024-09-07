@@ -5,25 +5,32 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class AppStyles {
   static TextStyle h1(
-      {Color? color, FontWeight? fontWeight, double? letterSpacing}) {
+      {Color? color, FontWeight? fontWeight,
+        String? family,
+        double? letterSpacing}) {
     return TextStyle(
         color: color,
         fontSize: 24.sp,
         letterSpacing: letterSpacing,
+        fontFamily: family ?? 'Schuyler',
         fontWeight: fontWeight ?? FontWeight.w400);
   }
 
   static TextStyle h2(
-      {Color? color, FontWeight? fontWeight, double? letterSpacing}) {
+      {Color? color, FontWeight? fontWeight,
+        String? family,
+        double? letterSpacing}) {
     return TextStyle(
         color: color,
         fontSize: 20.sp,
+        fontFamily: family ?? 'Schuyler',
         letterSpacing: letterSpacing,
         fontWeight: fontWeight ?? FontWeight.w400);
   }
 
   static TextStyle h3({
     Color? color,
+    String? family,
     FontWeight? fontWeight,
     double? letterSpacing,
 
@@ -31,6 +38,7 @@ class AppStyles {
     return TextStyle(
         color: color,
         fontSize: 18.sp,
+        fontFamily: family ?? 'Schuyler',
         letterSpacing: letterSpacing,
         fontWeight: fontWeight ?? FontWeight.w400);
   }
@@ -39,10 +47,12 @@ class AppStyles {
       {Color? color,
         FontWeight? fontWeight,
         double? letterSpacing,
+        String? family,
         double? height}) {
     return TextStyle(
         fontSize: 16.sp,
         color: color,
+        fontFamily: family ?? 'Schuyler',
         height: height,
         letterSpacing: letterSpacing,
         fontWeight: fontWeight ?? FontWeight.w400);
@@ -52,9 +62,11 @@ class AppStyles {
       {Color? color,
         FontWeight? fontWeight,
         double? letterSpacing,
+        String? family,
         double? height}) {
     return TextStyle(
         fontSize: 14.sp,
+        fontFamily: family ?? 'Schuyler',
         color: color,
         height: height,
         letterSpacing: letterSpacing,
@@ -80,11 +92,17 @@ class AppStyles {
         String? family,
         double? letterSpacing,
         double? height,
+        Color? underlineColor,
+        TextDecoration? underline,
         FontWeight? fontWeight}) {
     return TextStyle(
         fontWeight: fontWeight ?? FontWeight.w400,
         color: color,
         fontSize: size,
+        decoration: underline ?? TextDecoration.none,
+        decorationColor: underlineColor??Colors.transparent,
+        fontFamily: family ?? 'Schuyler',
+
         height: height,
         letterSpacing: letterSpacing,
        );
