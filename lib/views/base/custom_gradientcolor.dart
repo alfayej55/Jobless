@@ -4,7 +4,6 @@ import 'package:flutter/material.dart';
 class CustomGradientcolor extends StatelessWidget {
   Widget chiled;
    CustomGradientcolor({super.key,required this.chiled});
-
   @override
   Widget build(BuildContext context) {
     return Container(
