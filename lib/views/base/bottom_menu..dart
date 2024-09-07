@@ -137,7 +137,8 @@ class _BottomMenuState extends State<BottomMenu> {
     List<BottomBarItem> menuItems = [
       getItem(AppIcons.homeIcon, 'Home', theme, 0),
       getItem(AppIcons.notificationIcon, 'Notifications', theme, 1),
-      getItem(AppIcons.profileIcon, 'Profile', theme, 2),
+      getItem(AppIcons.massageIcon, 'Message', theme, 2),
+      getItem(AppIcons.profileIcon, 'Profile', theme, 3),
     ];
 
 
@@ -146,7 +147,7 @@ class _BottomMenuState extends State<BottomMenu> {
       bottomBarItems: menuItems,
       color: Get.theme.primaryColor,
       bottomBarWidth: double.infinity,
-      circleMargin: 5,
+      circleMargin: 1,
       showLabel: true,
       onTap: (value) {
         print("Page Change>>$value");
@@ -155,16 +156,19 @@ class _BottomMenuState extends State<BottomMenu> {
             Get.offAndToNamed(AppRoutes.homeScreen);
             break;
           case 1:
-            Get.offAndToNamed(AppRoutes.walletScreen);
+            Get.offAndToNamed(AppRoutes.notificationScreen);
             break;
-          case 2:
+          case  2:
+            Get.offAndToNamed(AppRoutes.messageScreen);
+            break;
+          case 3:
             Get.offAndToNamed(AppRoutes.profileScreen);
             break;
         }
       },
       itemLabelStyle: AppStyles.customSize(size: 12,color: Color(0xffC4D3F6)),
       kIconSize: 23.0,
-      kBottomRadius: 10.0,
+      kBottomRadius: 5.0,
       notchBottomBarController: _controller,
     );
   }

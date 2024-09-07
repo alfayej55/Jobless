@@ -1,8 +1,8 @@
 import 'package:get/get.dart';
 import 'package:jobless/views/screen/Home/home_screen.dart';
+import 'package:jobless/views/screen/Message/message_screen.dart';
 import 'package:jobless/views/screen/Profile/profile_screen.dart';
-import 'package:jobless/views/screen/Wallet/wallet_screen.dart';
-
+import '../views/screen/Notification/notification_screen.dart';
 import '../views/screen/Splash/splash_screen.dart';
 
 class AppRoutes{
@@ -10,12 +10,14 @@ class AppRoutes{
   static String splashScreen="/splash_screen";
   static String homeScreen="/home_screen";
   static String profileScreen="/profile_screen";
-  static String walletScreen="/wallet_screen";
+  static String notificationScreen="/notification_screen";
+  static String messageScreen="/massage_screen";
 
  static List<GetPage> page=[
     GetPage(name:splashScreen, page: ()=>const SplashScreen()),
     GetPage(name:homeScreen, page: ()=>const HomeScreen(),transition:Transition.noTransition),
-    GetPage(name:walletScreen, page: ()=>const WalletScreen(),transition:Transition.noTransition),
+    GetPage(name:notificationScreen, page: ()=>const NotificationScreen(),transition:Transition.noTransition),
+    GetPage(name:messageScreen, page: ()=>const MessageScreen(),transition:Transition.noTransition),
     GetPage(name:profileScreen, page: ()=>const ProfileScreen(),transition: Transition.noTransition),
   ];
 
