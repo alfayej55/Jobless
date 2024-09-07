@@ -136,7 +136,7 @@ class _BottomMenuState extends State<BottomMenu> {
         final theme = Theme.of(context);
     List<BottomBarItem> menuItems = [
       getItem(AppIcons.homeIcon, 'Home', theme, 0),
-      getItem(AppIcons.walletIcon, 'Wallet', theme, 1),
+      getItem(AppIcons.notificationIcon, 'Notifications', theme, 1),
       getItem(AppIcons.profileIcon, 'Profile', theme, 2),
     ];
 
