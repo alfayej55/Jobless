@@ -10,6 +10,7 @@ class AppString {
   static String subjobConfiramTitleText='Finding a job can be challenging, but the Jobless app is here to help. Whether you re seeking your first job, changing careers';
   static String yesText='Yes';
   static String noText='No';
+  static String submitText='Submit';
   static String choceCategoriText='Choose a Category';
   static String moreCategoryText='Choose three or more categories that represent what you want to see';
 

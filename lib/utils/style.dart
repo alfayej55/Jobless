@@ -12,7 +12,7 @@ class AppStyles {
         color: color,
         fontSize: 24.sp,
         letterSpacing: letterSpacing,
-        fontFamily: family ?? 'Schuyler',
+        fontFamily: family ?? 'DMSans',
         fontWeight: fontWeight ?? FontWeight.w400);
   }
 
@@ -23,7 +23,7 @@ class AppStyles {
     return TextStyle(
         color: color,
         fontSize: 20.sp,
-        fontFamily: family ?? 'Schuyler',
+        fontFamily: family ?? 'DMSans',
         letterSpacing: letterSpacing,
         fontWeight: fontWeight ?? FontWeight.w400);
   }
@@ -38,7 +38,7 @@ class AppStyles {
     return TextStyle(
         color: color,
         fontSize: 18.sp,
-        fontFamily: family ?? 'Schuyler',
+        fontFamily: family ?? 'DMSans',
         letterSpacing: letterSpacing,
         fontWeight: fontWeight ?? FontWeight.w400);
   }
@@ -52,7 +52,7 @@ class AppStyles {
     return TextStyle(
         fontSize: 16.sp,
         color: color,
-        fontFamily: family ?? 'Schuyler',
+        fontFamily: family ?? 'DMSans',
         height: height,
         letterSpacing: letterSpacing,
         fontWeight: fontWeight ?? FontWeight.w400);
@@ -66,7 +66,7 @@ class AppStyles {
         double? height}) {
     return TextStyle(
         fontSize: 14.sp,
-        fontFamily: family ?? 'Schuyler',
+        fontFamily: family ?? 'DMSans',
         color: color,
         height: height,
         letterSpacing: letterSpacing,
@@ -77,9 +77,11 @@ class AppStyles {
       {Color? color,
         FontWeight? fontWeight,
         double? letterSpacing,
+        String? family,
         double? height}) {
     return TextStyle(
         fontSize: 12.sp,
+        fontFamily: family ?? 'DMSans',
         color: color,
         height: height,
         letterSpacing: letterSpacing,
@@ -101,7 +103,7 @@ class AppStyles {
         fontSize: size,
         decoration: underline ?? TextDecoration.none,
         decorationColor: underlineColor??Colors.transparent,
-        fontFamily: family ?? 'Schuyler',
+        fontFamily: family ?? 'DMSans',
 
         height: height,
         letterSpacing: letterSpacing,
