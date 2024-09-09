@@ -2,6 +2,8 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:get/get.dart';
+import 'package:jobless/helpers/route.dart';
 import 'package:jobless/utils/app_image.dart';
 import 'package:jobless/utils/app_string.dart';
 import 'package:jobless/utils/style.dart';
@@ -20,12 +22,17 @@ class JobConfiramScreen extends StatelessWidget {
             padding:  EdgeInsets.symmetric(horizontal: 24.w),
             child: Column(
               children: [
-                Align(
-                  alignment: Alignment.centerRight,
-                  child: Padding(
-                    padding:  EdgeInsets.only(top: 51.h),
-                    child: Text(AppString.skipText,
-                        style: AppStyles.customSize(size: 20,fontWeight: FontWeight.w500,underline: TextDecoration.underline)),
+                InkWell(
+                  onTap: (){
+                    Get.toNamed(AppRoutes.jobCategoriScreen);
+                  },
+                  child: Align(
+                    alignment: Alignment.centerRight,
+                    child: Padding(
+                      padding:  EdgeInsets.only(top: 51.h),
+                      child: Text(AppString.skipText,
+                          style: AppStyles.customSize(size: 20,fontWeight: FontWeight.w500,underline: TextDecoration.underline)),
+                    ),
                   ),
                 ),
                 SizedBox(height: 30.h,),
@@ -43,7 +50,9 @@ class JobConfiramScreen extends StatelessWidget {
                     CustomOutlineButton(
                         width: 165.w,
                         color: Colors.white,
-                        onTap: (){},
+                        onTap: (){
+                          Get.toNamed(AppRoutes.jobCategoriScreen);
+                        },
                         text: AppString.noText),
                     CustomButton(
                         width: 165.w,
