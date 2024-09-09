@@ -1,4 +1,5 @@
 import 'package:get/get.dart';
+import 'package:jobless/views/screen/Auth/login_screen.dart';
 import 'package:jobless/views/screen/Home/home_screen.dart';
 import 'package:jobless/views/screen/Message/message_screen.dart';
 import 'package:jobless/views/screen/Profile/profile_screen.dart';
@@ -18,6 +19,7 @@ class AppRoutes{
   static String onboardingScreen="/onboarding_screen";
   static String jobConfirmScreen="/jobConfirm_screen";
   static String jobCategoriScreen="/jobCategori_screen";
+  static String loginScreen="/login_screen";
 
  static List<GetPage> page=[
     GetPage(name:splashScreen, page: ()=>const SplashScreen()),
@@ -28,6 +30,7 @@ class AppRoutes{
     GetPage(name:profileScreen, page: ()=>const ProfileScreen(),transition: Transition.noTransition),
      GetPage(name:jobConfirmScreen, page: ()=>const JobConfiramScreen()),
      GetPage(name:jobCategoriScreen, page: ()=>const JoblessCategoricScreen()),
+     GetPage(name:loginScreen, page: ()=>const LoginScreen()),
   ];
 
 

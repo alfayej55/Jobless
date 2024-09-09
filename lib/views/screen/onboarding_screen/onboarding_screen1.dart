@@ -49,7 +49,9 @@ class OnBoardingScreen1 extends StatelessWidget {
                 children: [
                   CustomButton(
                       width: 165.w,
-                      onTap: (){},
+                      onTap: (){
+                        Get.toNamed(AppRoutes.loginScreen);
+                      },
                       text: AppString.loginText),
 
                   CustomOutlineButton(
