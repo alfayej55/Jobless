@@ -7,6 +7,7 @@ import 'package:jobless/utils/app_string.dart';
 import 'package:jobless/utils/style.dart';
 import 'package:jobless/views/base/custom_button.dart';
 import 'package:jobless/views/base/custom_gradientcolor.dart';
+import 'package:jobless/views/base/custom_outlinebutton.dart';
 
 class OnBoardingScreen1 extends StatelessWidget {
   const OnBoardingScreen1({super.key});
@@ -35,10 +36,22 @@ class OnBoardingScreen1 extends StatelessWidget {
 
 
               SizedBox(height: 88.h,),
-              CustomButton(
-                 width: 165.w,
-                  onTap: (){},
-                  text: AppString.loginText)
+
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  CustomButton(
+                      width: 165.w,
+                      onTap: (){},
+                      text: AppString.loginText),
+
+                  CustomOutlineButton(
+                      width: 165.w,
+                      color: Colors.white,
+                      onTap: (){},
+                      text: AppString.registerText)
+                ],
+              )
 
 
             ],

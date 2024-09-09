@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:jobless/utils/app_colors.dart';
 
 ThemeData light({Color color = const Color(0xFF4361EE)}) => ThemeData(
   fontFamily: 'Roboto',
@@ -13,7 +14,19 @@ ThemeData light({Color color = const Color(0xFF4361EE)}) => ThemeData(
       backgroundColor: Colors.white,
     elevation: 5,
   ),
+  outlinedButtonTheme: OutlinedButtonThemeData(
+    style: OutlinedButton.styleFrom(
+      side: BorderSide(color: AppColors.primaryColor), // Border color
+
+    ),
+  ),
 
   textButtonTheme: TextButtonThemeData(style: TextButton.styleFrom(foregroundColor: color)),
   colorScheme: ColorScheme.light(primary: color, secondary: color).copyWith(background: const Color(0xFFF3F3F3)).copyWith(error: Color(0xFFE84D4F)),
+
+
+
+
+
+
 );
