@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:get/get.dart';
+import 'package:jobless/helpers/route.dart';
 import 'package:jobless/utils/app_colors.dart';
 import 'package:jobless/utils/app_icons.dart';
 import 'package:jobless/utils/app_image.dart';
@@ -73,15 +75,19 @@ class LoginScreen extends StatelessWidget {
 
             /// Route SignUpScreen
             SizedBox(height: 20.h,),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              crossAxisAlignment: CrossAxisAlignment.center,
-              children: [
-                Text("Don’t have an account? ",style: AppStyles.customSize(size: 14,family: "Schuyler",fontWeight: FontWeight.w500,color: AppColors.subTextColor)),
-                Text("Sign up",style: AppStyles.customSize(size: 15,family: "Schuyler",fontWeight: FontWeight.w500,color: AppColors.textColor)),
-              ],
+            InkWell(
+              onTap: (){
+                Get.toNamed(AppRoutes.signUpScreen);
+              },
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: [
+                  Text("Don’t have an account? ",style: AppStyles.customSize(size: 14,family: "Schuyler",fontWeight: FontWeight.w500,color: AppColors.subTextColor)),
+                  Text("Sign up",style: AppStyles.customSize(size: 15,family: "Schuyler",fontWeight: FontWeight.w500,color: AppColors.textColor)),
+                ],
+              ),
             )
-            
 
           ],
         ),

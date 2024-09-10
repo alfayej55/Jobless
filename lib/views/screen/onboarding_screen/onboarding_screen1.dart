@@ -57,7 +57,9 @@ class OnBoardingScreen1 extends StatelessWidget {
                   CustomOutlineButton(
                       width: 165.w,
                       color: Colors.white,
-                      onTap: (){},
+                      onTap: (){
+                        Get.toNamed(AppRoutes.signUpScreen);
+                      },
                       text: AppString.registerText)
                 ],
               )

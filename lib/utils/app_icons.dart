@@ -1,6 +1,7 @@
 class AppIcons{
 
   static String baseUrl="assets/icons";
+
   static String homeIcon="assets/icons/home_icon.svg";
   static String notificationIcon="assets/icons/notification_icon.svg";
   static String profileIcon="assets/icons/profile_icon.svg";
@@ -12,7 +13,7 @@ class AppIcons{
   static String emailIcon="assets/icons/email_icon.svg";
   static String gelaryIcon="assets/icons/gelary_icon.svg";
   static String cameraIcon="assets/icons/camera_icon.svg";
-  static String calenderIcon="assets/icons/calender_icon.svg";
+  static String calenderIcon="assets/icons/calender.svg";
 
 
 
