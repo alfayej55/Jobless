@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:jobless/utils/app_colors.dart';
 import 'package:jobless/utils/app_icons.dart';
 import 'package:jobless/utils/app_image.dart';
 import 'package:jobless/utils/app_string.dart';
@@ -57,8 +58,30 @@ class LoginScreen extends StatelessWidget {
                 ),
 
                 controller: emailCtrl),
+            SizedBox(height: 15.h),
 
-            CustomButton(onTap: (){}, text: AppString.loginText)
+            /// Forgot passwort
+
+            Align(
+              alignment: Alignment.centerRight,
+                child: Text("Forgot Password?",style: AppStyles.customSize(size: 14,family: "Schuyler",fontWeight: FontWeight.w500,color: AppColors.primaryColor))),
+            /// Login Button
+
+            SizedBox(height: 20.h,),
+            CustomButton(onTap: (){}, text: AppString.loginText),
+
+
+            /// Route SignUpScreen
+            SizedBox(height: 20.h,),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: [
+                Text("Don’t have an account? ",style: AppStyles.customSize(size: 14,family: "Schuyler",fontWeight: FontWeight.w500,color: AppColors.subTextColor)),
+                Text("Sign up",style: AppStyles.customSize(size: 15,family: "Schuyler",fontWeight: FontWeight.w500,color: AppColors.textColor)),
+              ],
+            )
+            
 
           ],
         ),
