@@ -31,6 +31,7 @@ class AppString {
   static String forgotPasswordText="Forgot Password";
   static String subforgotPassword="Please enter your email address to reset password.";
   static String verifyEmailTExt="Verify Email";
+  static String sentOtpTExt="Sent OTP";
   static String subverifyEmailTExt="Please check your email and enter the code";
   static String redentCodeTExt="Didn’t receive code? Resend it";
   static String selectLocationTExt="Select your location";
