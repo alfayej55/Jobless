@@ -30,7 +30,7 @@ class AppRoutes{
     GetPage(name:profileScreen, page: ()=>const ProfileScreen(),transition: Transition.noTransition),
      GetPage(name:jobConfirmScreen, page: ()=>const JobConfiramScreen()),
      GetPage(name:jobCategoriScreen, page: ()=>const JoblessCategoricScreen()),
-     GetPage(name:loginScreen, page: ()=>const LoginScreen()),
+     GetPage(name:loginScreen, page: ()=> LoginScreen()),
   ];
 
 

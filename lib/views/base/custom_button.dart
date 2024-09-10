@@ -36,7 +36,7 @@ class CustomButton extends StatelessWidget {
             height: 20.h,
             width: 20.h,
             child: const CircularProgressIndicator(color: Colors.white,),
-          ):Text(text,style:textStyle?? AppStyles.h3(fontWeight: FontWeight.w500,color:Colors.white),)),
+          ):Text(text,style:textStyle?? AppStyles.h4(fontWeight: FontWeight.w500,color:Colors.white,family: "Schuyler"),)),
     );
   }
 }
