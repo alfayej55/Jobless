@@ -246,7 +246,9 @@ class _SignUpScreenState extends State<SignUpScreen> {
               SizedBox(height: 10.h),
               CustomButton(
                   color: isChecked ?AppColors.primaryColor:AppColors.dividerColor,
-                  onTap: (){}, text: AppString.signuoText),
+                  onTap: (){
+                    Get.toNamed(AppRoutes.emailveryfaiScreen);
+                  }, text: AppString.signuoText),
 
               SizedBox(height: 10.h,),
               InkWell(

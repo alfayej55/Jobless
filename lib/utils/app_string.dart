@@ -28,4 +28,12 @@ class AppString {
   static String dateOfBirthText='Date Of Birth';
   static String signUoConditionText='By creating an account, I accept the Terms & Conditions & Privacy Policy.';
 
+  static String forgotPasswordText="Forgot Password";
+  static String subforgotPassword="Please enter your email address to reset password.";
+  static String verifyEmailTExt="Verify Email";
+  static String subverifyEmailTExt="Please check your email and enter the code";
+  static String redentCodeTExt="Didn’t receive code? Resend it";
+  static String selectLocationTExt="Select your location";
+  //static String verifyEmailTExt="";
+
 }
