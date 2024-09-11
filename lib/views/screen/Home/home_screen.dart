@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:get/get.dart';
+import 'package:jobless/helpers/route.dart';
 import 'package:jobless/utils/app_icons.dart';
 import 'package:jobless/utils/app_image.dart';
 import 'package:jobless/utils/app_string.dart';
@@ -24,9 +26,14 @@ class HomeScreen extends StatelessWidget {
          child: SvgPicture.asset(AppImage.appIcon,height: 48.h,width: 48.w,),
        ),
         actions: [
-          Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 24),
-            child: SvgPicture.asset(AppIcons.searchIcon,height: 36.h,width: 36.w,),
+          InkWell(
+            onTap: (){
+            Get.toNamed(AppRoutes.searchScreen);
+            },
+            child: Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 24),
+              child: SvgPicture.asset(AppIcons.searchIcon,height: 36.h,width: 36.w,),
+            ),
           ),
         ],
         title: Text(AppString.joblessText,style:AppStyles.customSize(size: 16,family: "Schuyler",fontWeight: FontWeight.w500,color: AppColors.primaryColor)),

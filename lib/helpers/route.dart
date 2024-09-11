@@ -4,6 +4,7 @@ import 'package:jobless/views/screen/Auth/login_screen.dart';
 import 'package:jobless/views/screen/Auth/otp_screen.dart';
 import 'package:jobless/views/screen/Auth/signup_screen.dart';
 import 'package:jobless/views/screen/Home/home_screen.dart';
+import 'package:jobless/views/screen/Home/search_screen.dart';
 import 'package:jobless/views/screen/Message/message_screen.dart';
 import 'package:jobless/views/screen/Profile/profile_screen.dart';
 import 'package:jobless/views/screen/onboarding_screen/job_confirmetion_screen.dart';
@@ -26,6 +27,7 @@ class AppRoutes{
   static String signUpScreen="/signUp_screen";
   static String emailveryfaiScreen="/emailverifai_screen";
   static String otpScreen="/otp_screen";
+  static String searchScreen="/search_screen";
 
  static List<GetPage> page=[
     GetPage(name:splashScreen, page: ()=>const SplashScreen()),
@@ -40,6 +42,7 @@ class AppRoutes{
      GetPage(name:signUpScreen, page: ()=> SignUpScreen()),
      GetPage(name:emailveryfaiScreen, page: ()=> EmailverificationScreen()),
      GetPage(name:otpScreen, page: ()=> OtpScreen()),
+     GetPage(name:searchScreen, page: ()=> SearchScreen()),
   ];
 
 

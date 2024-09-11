@@ -37,6 +37,7 @@ class AppString {
   static String redentCodeTExt="Didn’t receive code? Resend it";
   static String selectLocationTExt="Select your location";
   static String homeSearchText="I feel the need-the need for speed....";
+  static String suggestedText="Suggested";
   //static String verifyEmailTExt="";
 
 }
