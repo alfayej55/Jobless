@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:jobless/utils/app_colors.dart';
 
 
 
@@ -110,9 +111,9 @@ class AppStyles {
        );
   }
 
-  static BoxShadow boxShadow =  BoxShadow(
-      blurRadius: 4,
+  static BoxShadow boxShadow = BoxShadow(
+      blurRadius: 12,
       offset: const Offset(0,0),
-      color:Colors.black.withOpacity(0.02),
+      color:AppColors.primaryColor.withOpacity(0.2),
       spreadRadius:0);
 }

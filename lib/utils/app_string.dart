@@ -36,6 +36,7 @@ class AppString {
   static String subverifyEmailTExt="Please check your email and enter the code";
   static String redentCodeTExt="Didn’t receive code? Resend it";
   static String selectLocationTExt="Select your location";
+  static String homeSearchText="I feel the need-the need for speed....";
   //static String verifyEmailTExt="";
 
 }
