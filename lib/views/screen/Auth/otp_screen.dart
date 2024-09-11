@@ -68,6 +68,7 @@ class _OtpScreenState extends State<OtpScreen> {
             SizedBox(
               height: 55.h,
             ),
+
             Text(AppString.verifyEmailTExt,
                 style: AppStyles.h1(family: "Schuyler")),
             Text(AppString.subverifyEmailTExt, style: AppStyles.h5()),
