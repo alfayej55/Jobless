@@ -37,7 +37,9 @@ class PostCart extends StatelessWidget {
               ],
             ),
             subtitle: Row(
+
               children: [
+
                 Text("1h. ",style: AppStyles.h6(color: AppColors.subTextColor),),
                 Text("Dhaka Bangladesh",
                   overflow: TextOverflow.ellipsis,
@@ -62,6 +64,47 @@ class PostCart extends StatelessWidget {
                 borderRadius: BorderRadius.circular(15.r),
               )
 
+            ],
+          ),
+
+          /// Like and comment icon
+          SizedBox(height:18.h,),
+          Row(
+            children: [
+              SvgPicture.asset(AppIcons.likeIcon),
+              SizedBox(width: 24.w,),
+              SvgPicture.asset(AppIcons.massageIcon,color: AppColors.subTextColor,height: 18.h,width: 22.w,),
+              SizedBox(width: 24.w,),
+              Row(
+                children: [
+                  Text("2",style: AppStyles.h4(color: AppColors.primaryColor)),
+                  SvgPicture.asset(AppIcons.rewordIcon),
+                ],
+              ),
+
+            ],
+          ),
+          SizedBox(height:18.h,),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              Row(
+                children: [
+                  CircleAvatar(
+                      radius: 9,
+                      backgroundColor: AppColors.primaryColor,
+                      child: Center(child: SvgPicture.asset(AppIcons.likeIcon,height:8,color: Colors.white,))),
+                  SizedBox(width: 5,),
+                  Text("Liked arif and 155 others",style: AppStyles.customSize(size: 10,fontWeight: FontWeight.w400),)
+                ],
+              ),
+              Row(
+                children: [
+                  Text("2",style:AppStyles.customSize(size: 10,fontWeight: FontWeight.w400)),
+                  SizedBox(width: 5.h,),
+                  Text("Comment",style:AppStyles.customSize(size: 10,fontWeight: FontWeight.w400)),
+                ],
+              )
             ],
           )
 
