@@ -4,6 +4,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:jobless/utils/app_icons.dart';
 import 'package:jobless/utils/style.dart';
+import 'package:jobless/views/base/casess_network_image.dart';
 
 import '../../../utils/app_colors.dart';
 import '../../../utils/app_image.dart';
@@ -54,7 +55,13 @@ class PostCart extends StatelessWidget {
                 maxLines: 26,
                 textAlign:TextAlign.justify,
                 style: AppStyles.h5(color: AppColors.subTextColor),),
-              
+              SizedBox(height: 10.h),
+              CustomNetworkImage(imageUrl: "https://www.befunky.com/images/prismic/82e0e255-17f9-41e0-85f1-210163b0ea34_hero-blur-image-3.jpg?auto=avif,webp&format=jpg&width=896",
+                  height: 180.h,
+                  width: double.infinity,
+                borderRadius: BorderRadius.circular(15.r),
+              )
+
             ],
           )
 
