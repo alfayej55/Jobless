@@ -33,46 +33,64 @@ class HomeScreen extends StatelessWidget {
         backgroundColor: Colors.transparent,
       ),
       body: Scaffold(
-        body:Column(
-          children: [
+        body:SingleChildScrollView(
 
-            /// Searech Section
-            Padding(
-              padding:  EdgeInsets.symmetric(horizontal: 24.w,vertical: 10.w),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  Container(
-                    height:48.h,
-                    width: 48.w,
-                    decoration: BoxDecoration(
-                      shape: BoxShape.circle,
-                      image: DecorationImage(image: AssetImage(AppImage.personImage)),
+          child: Column(
+            children: [
+          
+              /// Searech Section
+              Padding(
+                padding:  EdgeInsets.symmetric(horizontal: 24.w,vertical: 10.w),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Container(
+                      height:48.h,
+                      width: 48.w,
+                      decoration: BoxDecoration(
+                        shape: BoxShape.circle,
+                        image: DecorationImage(image: AssetImage(AppImage.personImage)),
+                      ),
                     ),
-                  ),
-                  Container(
-                    height: 46.h,
-                    width: 240.w,
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(23).r,
-                      color: Colors.white,
-                      boxShadow: [
-                        AppStyles.boxShadow
-                      ]
+                    Container(
+                      height: 46.h,
+                      width: 240.w,
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(23).r,
+                        color: Colors.white,
+                        boxShadow: [
+                          AppStyles.boxShadow
+                        ]
+                      ),
+                      child: Center(child: Text(AppString.homeSearchText,style: AppStyles.customSize(size:10,fontWeight: FontWeight.w400,family: "Schuyler",color: AppColors.dark2Color),)),
                     ),
-                    child: Center(child: Text(AppString.homeSearchText,style: AppStyles.customSize(size:10,fontWeight: FontWeight.w400,family: "Schuyler",color: AppColors.dark2Color),)),
-                  ),
-                  SvgPicture.asset(AppIcons.gelaryIcon,height: 21,width: 23,)
-                ],
+                    SvgPicture.asset(AppIcons.gelaryIcon,height: 21,width: 23,)
+                  ],
+                ),
               ),
-            ),
-
-            Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 24),
-              child: PostCart(),
-            )
-
-          ],
+          
+              /// JOb Post Section
+          
+           Padding(
+             padding:  EdgeInsets.symmetric(horizontal: 24.w),
+             child: ListView.separated(
+                 itemCount: 5,
+                 shrinkWrap: true,
+                 primary: false,
+                 itemBuilder: (context,index){
+                  return  PostCart();
+             },
+               separatorBuilder: (context,index){
+                   return Divider(
+                     color: Color(0xffC4D3F6)
+                   );
+               },
+             ),
+           )
+          
+          
+            ],
+          ),
         ),
       ),
     );
