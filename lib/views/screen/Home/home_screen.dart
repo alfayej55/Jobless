@@ -37,7 +37,7 @@ class HomeScreen extends StatelessWidget {
 
           child: Column(
             children: [
-          
+
               /// Searech Section
               Padding(
                 padding:  EdgeInsets.symmetric(horizontal: 24.w,vertical: 10.w),
@@ -68,9 +68,11 @@ class HomeScreen extends StatelessWidget {
                   ],
                 ),
               ),
-          
+
+
+
               /// JOb Post Section
-          
+
            Padding(
              padding:  EdgeInsets.symmetric(horizontal: 24.w),
              child: ListView.separated(
@@ -87,8 +89,8 @@ class HomeScreen extends StatelessWidget {
                },
              ),
            )
-          
-          
+
+
             ],
           ),
         ),
