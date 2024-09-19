@@ -38,6 +38,10 @@ class AppString {
   static String selectLocationTExt="Select your location";
   static String homeSearchText="I feel the need-the need for speed....";
   static String suggestedText="Suggested";
+  static String aboutText="About";
+  static String jobexperienceText="job experience ";
+  static String bioText="Bio ";
+  static String jobLessCategotiText="job less category";
   //static String verifyEmailTExt="";
 
 }
