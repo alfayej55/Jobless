@@ -27,19 +27,22 @@ class FriendRequestCard extends StatelessWidget {
 
                 Text("Labu Basar",style: AppStyles.customSize(size:14,fontWeight: FontWeight.w500,family: "Schuyler",),),
 
-                SizedBox(height:16.h,),
+                SizedBox(height:14.h),
                 Row(
                   children: [
                     CustomOutlineButton(
                         onTap: (){},
                         width: 110.w,
+                        height: 40,
                         text: 'View Profile',
                       textStyle: AppStyles.h5(),
                     ),
                     SizedBox(width: 10.w,),
+
                     CustomButton(
                         onTap: (){},
                         width:120.w,
+                        height: 40.h,
                         text: "Request")
                   ],
                 )

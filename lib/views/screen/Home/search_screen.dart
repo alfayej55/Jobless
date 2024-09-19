@@ -73,7 +73,6 @@ class SearchScreen extends StatelessWidget {
                   for (String tab in tabbarList) Tab(text: tab.tr),
                 ],
               ),
-              SizedBox(height: 16.h),
 
               /// Tab Bar View
               Expanded(
