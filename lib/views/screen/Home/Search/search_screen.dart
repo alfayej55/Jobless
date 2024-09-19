@@ -4,13 +4,13 @@ import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';
 import 'package:jobless/utils/app_string.dart';
 import 'package:jobless/utils/style.dart';
-import 'package:jobless/views/screen/Home/friend_suggested.dart';
-import 'package:jobless/views/screen/Home/group_suggested.dart';
+import 'package:jobless/views/screen/Home/Search/friend_suggested.dart';
+import 'package:jobless/views/screen/Home/Search/group_suggested.dart';
 
-import '../../../utils/app_colors.dart';
-import '../../../utils/app_icons.dart';
-import '../../base/custom_text_field.dart';
-import '../Widget/friend_request_card.dart';
+import '../../../../utils/app_colors.dart';
+import '../../../../utils/app_icons.dart';
+import '../../../base/custom_text_field.dart';
+import '../../Widget/friend_request_card.dart';
 
 class SearchScreen extends StatelessWidget {
   SearchScreen({super.key});

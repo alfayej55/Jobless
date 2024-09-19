@@ -3,11 +3,11 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:jobless/utils/app_colors.dart';
 import 'package:jobless/utils/app_string.dart';
 
-import '../../../utils/style.dart';
-import '../../base/casess_network_image.dart';
-import '../../base/custom_button.dart';
-import '../../base/custom_outlinebutton.dart';
-import '../Widget/friend_request_card.dart';
+import '../../../../utils/style.dart';
+import '../../../base/casess_network_image.dart';
+import '../../../base/custom_button.dart';
+import '../../../base/custom_outlinebutton.dart';
+import '../../Widget/friend_request_card.dart';
 
 class GroupSuggested extends StatelessWidget {
   const GroupSuggested({super.key});

@@ -15,6 +15,8 @@ class AppIcons{
   static String cameraIcon="assets/icons/camera_icon.svg";
   static String calenderIcon="assets/icons/calender.svg";
   static String tiomarkIcon="$baseUrl/tikmark_icon.svg";
+  static String locationIcon="$baseUrl/location_icon.svg";
+  static String starIcon="$baseUrl/star_icon.svg";
 
 
 

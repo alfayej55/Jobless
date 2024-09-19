@@ -3,7 +3,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:jobless/helpers/route.dart';
 
-import '../Widget/friend_request_card.dart';
+import '../../Widget/friend_request_card.dart';
 
 class FriendSuggested extends StatelessWidget {
   const FriendSuggested({super.key});
