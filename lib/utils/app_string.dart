@@ -44,6 +44,7 @@ class AppString {
   static String jobLessCategotiText="job less category";
   static String postText="Post";
   static String notificationText="Notification";
+  static String profileText="Profile";
   //static String verifyEmailTExt="";
 
 }

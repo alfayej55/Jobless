@@ -18,7 +18,7 @@ class NotificationScreen extends StatelessWidget {
      appBar:  AppBar(
        centerTitle: true,
         title: Text(AppString.notificationText,style: AppStyles.customSize(
-          size: 16,
+          size: 20,
           fontWeight: FontWeight.w500,
           color: AppColors.textColor,
           family: "Schuyler",

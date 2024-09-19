@@ -18,6 +18,7 @@ class AppIcons{
   static String locationIcon="$baseUrl/location_icon.svg";
   static String starIcon="$baseUrl/star_icon.svg";
   static String threeDotIcon="$baseUrl/threedot_icon.svg";
+  static String crownIcon="$baseUrl/crown_icon.svg";
 
 
 
