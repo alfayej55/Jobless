@@ -9,6 +9,7 @@ import 'package:jobless/views/base/custom_button.dart';
 import 'package:jobless/views/base/custom_text_field.dart';
 
 import '../../../utils/app_colors.dart';
+import '../../base/casess_network_image.dart';
 class FeelingPostScreen extends StatelessWidget {
    FeelingPostScreen({super.key});
 
@@ -48,10 +49,11 @@ class FeelingPostScreen extends StatelessWidget {
             child: TextField(
               controller: postCtrl,
               cursorColor: AppColors.subTextColor,
+             // textAlign: TextAlign.center,  // Centers the text and cursor
               decoration: InputDecoration(
-                hintText: "What’s happening?",
+                hintText: "What’s happening ?",
                 contentPadding: EdgeInsets.zero,
-                hintStyle: AppStyles.h6(color: AppColors.subTextColor),// Customize the hint text color
+                hintStyle: AppStyles.h6(color: AppColors.subTextColor), // Customize the hint text color
                 fillColor: Colors.transparent,
                 filled: true,
                 border: OutlineInputBorder(
@@ -62,9 +64,19 @@ class FeelingPostScreen extends StatelessWidget {
                 ),
                 focusedBorder: OutlineInputBorder(
                   borderSide: BorderSide(color: Colors.transparent), // Transparent when focused
+                ), // Adjust the prefix constraints to fit properly
+                prefixIcon: Padding(
+                  padding:  EdgeInsets.only(right: 10),
+                  child: CustomNetworkImage(
+                    imageUrl: "https://www.befunky.com/images/prismic/82e0e255-17f9-41e0-85f1-210163b0ea34_hero-blur-image-3.jpg?auto=avif,webp&format=jpg&width=896",
+                    height: 48.h,
+                    width: 48.w,
+                    boxShape: BoxShape.circle,
+                  ),
                 ),
               ),
             ),
+
 
           )
         ],
