@@ -28,7 +28,10 @@ class SearchScreen extends StatelessWidget {
             onTap: () {
               Get.back();
             },
-            child: Icon(Icons.arrow_back_ios),
+            child: CircleAvatar(
+              radius: 20,
+                backgroundColor: Colors.transparent,
+                child: Icon(Icons.arrow_back_ios)),
           ),
           backgroundColor: Colors.transparent,
         ),

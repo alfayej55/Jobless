@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:get/get.dart';
+import 'package:jobless/helpers/route.dart';
 
 import '../Widget/friend_request_card.dart';
 
@@ -16,7 +18,11 @@ class FriendSuggested extends StatelessWidget {
         itemBuilder: (context,index){
       return   Padding(
         padding: EdgeInsets.symmetric(vertical:10.h),
-        child: FriendRequestCard(),
+        child: FriendRequestCard(
+          viewOnTap: (){
+            Get.toNamed(AppRoutes.viewFriendScreen);
+          },
+        ),
       );
     });
   }

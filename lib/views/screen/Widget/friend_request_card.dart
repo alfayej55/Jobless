@@ -6,7 +6,8 @@ import 'package:jobless/views/base/custom_outlinebutton.dart';
 
 import '../../../utils/style.dart';
 class FriendRequestCard extends StatelessWidget {
-  const FriendRequestCard({super.key});
+  final Function() viewOnTap;
+  FriendRequestCard({super.key,required this.viewOnTap});
 
   @override
   Widget build(BuildContext context) {
@@ -31,9 +32,9 @@ class FriendRequestCard extends StatelessWidget {
                 Row(
                   children: [
                     CustomOutlineButton(
-                        onTap: (){},
+                        onTap: viewOnTap,
                         width: 110.w,
-                        height: 40,
+                        height: 45,
                         text: 'View Profile',
                       textStyle: AppStyles.h5(),
                     ),
@@ -42,7 +43,7 @@ class FriendRequestCard extends StatelessWidget {
                     CustomButton(
                         onTap: (){},
                         width:120.w,
-                        height: 40.h,
+                        height: 50.h,
                         text: "Request")
                   ],
                 )
