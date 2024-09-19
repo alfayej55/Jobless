@@ -59,17 +59,22 @@ class HomeScreen extends StatelessWidget {
                         image: DecorationImage(image: AssetImage(AppImage.personImage)),
                       ),
                     ),
-                    Container(
-                      height: 46.h,
-                      width: 240.w,
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(23).r,
-                        color: Colors.white,
-                        boxShadow: [
-                          AppStyles.boxShadow
-                        ]
+                    InkWell(
+                      onTap: (){
+                        Get.toNamed(AppRoutes.feelpostScreen);
+                      },
+                      child: Container(
+                        height: 46.h,
+                        width: 240.w,
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(23).r,
+                          color: Colors.white,
+                          boxShadow: [
+                            AppStyles.boxShadow
+                          ]
+                        ),
+                        child: Center(child: Text(AppString.homeSearchText,style: AppStyles.customSize(size:10,fontWeight: FontWeight.w400,family: "Schuyler",color: AppColors.dark2Color),)),
                       ),
-                      child: Center(child: Text(AppString.homeSearchText,style: AppStyles.customSize(size:10,fontWeight: FontWeight.w400,family: "Schuyler",color: AppColors.dark2Color),)),
                     ),
                     SvgPicture.asset(AppIcons.gelaryIcon,height: 21,width: 23,)
                   ],
