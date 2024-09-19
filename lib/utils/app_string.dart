@@ -43,6 +43,7 @@ class AppString {
   static String bioText="Bio ";
   static String jobLessCategotiText="job less category";
   static String postText="Post";
+  static String notificationText="Notification";
   //static String verifyEmailTExt="";
 
 }
