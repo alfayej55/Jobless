@@ -2,7 +2,9 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
+import 'package:jobless/utils/app_icons.dart';
 import 'package:jobless/utils/app_string.dart';
 import 'package:jobless/utils/style.dart';
 import 'package:jobless/views/base/custom_button.dart';
@@ -10,10 +12,21 @@ import 'package:jobless/views/base/custom_text_field.dart';
 
 import '../../../utils/app_colors.dart';
 import '../../base/casess_network_image.dart';
-class FeelingPostScreen extends StatelessWidget {
+
+
+class FeelingPostScreen extends StatefulWidget {
    FeelingPostScreen({super.key});
 
+  @override
+  State<FeelingPostScreen> createState() => _FeelingPostScreenState();
+}
+
+class _FeelingPostScreenState extends State<FeelingPostScreen> {
   TextEditingController postCtrl=TextEditingController();
+
+  int? _selectedValue;
+  String selectPost="";
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -74,6 +87,20 @@ class FeelingPostScreen extends StatelessWidget {
                     boxShape: BoxShape.circle,
                   ),
                 ),
+                suffixIcon: InkWell(
+                  onTap: (){
+                    postSelect(context);
+                  },
+                  child: CircleAvatar(
+                    radius: 15,
+                                 backgroundColor: Colors.transparent,
+                    child: SvgPicture.asset(
+                      AppIcons.threeDotIcon,
+                      height: 20.h,
+
+                      color: Color(0xffC4D3F6)),
+                  ),
+                ),
               ),
             ),
 
@@ -81,6 +108,70 @@ class FeelingPostScreen extends StatelessWidget {
           )
         ],
       ),
+    );
+  }
+
+  /// Post Select
+
+  void postSelect(BuildContext context) {
+    showDialog(
+      context: context,
+      builder: (BuildContext context) {
+        return AlertDialog(
+          backgroundColor: AppColors.secendryColor,
+          content: StatefulBuilder(
+            builder: (BuildContext context, StateSetter setState) {
+              return Column(
+                mainAxisSize: MainAxisSize.min,
+                children: [
+                  ListTile(
+                    title: Text('Post Public'),
+                    titleTextStyle:AppStyles.customSize(
+                    size: 16,
+                    fontWeight: FontWeight.w500,
+                   color: AppColors.textColor,
+                    family: "Schuyler",
+              ),
+                    leading: Radio<int>(
+                      value: 1,
+                      groupValue: _selectedValue,
+                      onChanged: (int? value) {
+                        setState(() {
+                          _selectedValue = value;
+                          selectPost= "Post Public";
+                          print("Select>>>$selectPost");
+                        });
+
+                      },
+                    ),
+                  ),
+                  ListTile(
+                    title: Text('Post Private'),
+                    titleTextStyle:AppStyles.customSize(
+                      size: 16,
+                      fontWeight: FontWeight.w500,
+                      color: AppColors.textColor,
+                      family: "Schuyler",
+                    ),
+                    leading: Radio<int>(
+                      value: 2,
+                      groupValue: _selectedValue,
+                      onChanged: (int? value) {
+                        setState(() {
+                          _selectedValue = value;
+                          selectPost= "Post Private";
+                          print("Select>>>$selectPost");
+                        });
+
+                      },
+                    ),
+                  ),
+                ],
+              );
+            },
+          ),
+        );
+      },
     );
   }
 }

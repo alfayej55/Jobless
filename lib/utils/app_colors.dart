@@ -13,6 +13,7 @@ class AppColors{
   static Color subTextColor = const Color(0xFF565656);
   static Color dark2Color = const Color(0xff565656);
   static Color hintColor = const Color(0xFFB5B5B5);
+  static Color secendryColor = const Color(0xFFC4D3F6);
   static Color greyColor = const Color(0xFFB5B5B5);
   static Color fillColor = const Color(0xFF5181F8).withOpacity(0.08);
   static Color dividerColor = const Color(0xFF555555);
