@@ -19,6 +19,10 @@ class AppIcons{
   static String starIcon="$baseUrl/star_icon.svg";
   static String threeDotIcon="$baseUrl/threedot_icon.svg";
   static String crownIcon="$baseUrl/crown_icon.svg";
+  static String friendlistIcon="$baseUrl/friend_list_icon.svg";
+  static String logOutIcon="$baseUrl/logout_icon.svg";
+  static String menuIcon="$baseUrl/menu_icon.svg";
+  static String settingIcon="$baseUrl/setting_icon.svg";
 
 
 

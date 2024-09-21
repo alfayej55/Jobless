@@ -91,33 +91,42 @@ class ProfileScreen extends StatelessWidget {
 
 
           SizedBox(height: 16.h),
-          Container(
-            height:78.h,
-            decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(16.r),
-              color: AppColors.primaryColor
-            ),
-            child: Row(
-              children: [
-                SvgPicture.asset(AppIcons.crownIcon),
-                SizedBox(width: 10.w,),
-                Column(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Text(
-                        "gold package",
-                        style: AppStyles.h4(color: Colors.white)
-                    ),
-                    Text(
-                        "annually subscription",
-                        style: AppStyles.h6(color: Colors.white)
-                    ),
 
-                  ],
-                ),
+          /// Gold package container
 
-              ],
+          Padding(
+            padding:  EdgeInsets.symmetric(horizontal: 24.w),
+            child: Container(
+              height:78.h,
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(16.r),
+                color: AppColors.primaryColor
+              ),
+              child: Row(
+                children: [
+                  Padding(
+                    padding:  EdgeInsets.only(left: 14.w),
+                    child: SvgPicture.asset(AppIcons.crownIcon),
+                  ),
+                  SizedBox(width: 10.w,),
+                  Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text(
+                          "gold package",
+                          style: AppStyles.h4(color: Colors.white)
+                      ),
+                      Text(
+                          "annually subscription",
+                          style: AppStyles.h6(color: Colors.white)
+                      ),
+
+                    ],
+                  ),
+
+                ],
+              ),
             ),
           )
 
@@ -125,4 +134,17 @@ class ProfileScreen extends StatelessWidget {
       ),
     );
   }
+
+
+  customListTile(){
+    return Container(
+      decoration: BoxDecoration(
+        border: Border.all(color: AppColors.primaryColor)
+      ),
+      child: ListTile(
+
+      ),
+    );
+  }
+
 }
