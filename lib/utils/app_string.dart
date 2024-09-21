@@ -48,7 +48,7 @@ class AppString {
   static String personalInfoText="Personal information";
   static String myFriendText=" My friends list";
   static String myGroupText=" My group list";
-  static String settionText="setting";
+  static String settionText="Setting";
   static String logoutText="logout";
   static String myPostText="My Post";
   static String myBioText="My Bio";
@@ -58,6 +58,7 @@ class AppString {
   static String termConditionText="Terms & conditions";
   static String aboutusText="About us";
   static String supportText="support";
+
   //static String verifyEmailTExt="";
 
 }

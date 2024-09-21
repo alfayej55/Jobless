@@ -2,6 +2,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
+import 'package:jobless/helpers/route.dart';
 
 import '../../../../utils/app_colors.dart';
 import '../../../../utils/app_icons.dart';
@@ -30,10 +31,7 @@ class SettingScreen extends StatelessWidget {
               child: Icon(Icons.arrow_back_ios,size: 18,color: AppColors.textColor,)),
         ),
 
-        title: Text(AppString.settionText,style: AppStyles.customSize(
-          size: 20,
-          fontWeight: FontWeight.w500,
-          color: AppColors.textColor,
+        title: Text(AppString.settionText,style: AppStyles.h2(
           family: "Schuyler",
         )),
         backgroundColor: Colors.transparent,
@@ -46,7 +44,9 @@ class SettingScreen extends StatelessWidget {
           Customlisttile(
             title:AppString.changePasswordText,
             icon: AppIcons.passwordIcon,
-            onTap: (){},
+            onTap: (){
+              Get.toNamed(AppRoutes.passwordChangeScreen);
+            },
           ),
 
           SizedBox(height: 16.h),

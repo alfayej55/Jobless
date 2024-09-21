@@ -7,6 +7,7 @@ import 'package:jobless/views/screen/Home/feeling_post_screen.dart';
 import 'package:jobless/views/screen/Home/home_screen.dart';
 import 'package:jobless/views/screen/Home/Search/search_screen.dart';
 import 'package:jobless/views/screen/Profile/parsonal_info/personal_info_screen.dart';
+import 'package:jobless/views/screen/Profile/setting/change_password_screen.dart';
 import 'package:jobless/views/screen/Profile/setting/setting_screen.dart';
 import 'package:jobless/views/screen/Widget/view_friend_screen.dart';
 import 'package:jobless/views/screen/Message/message_screen.dart';
@@ -36,6 +37,7 @@ class AppRoutes{
   static String feelpostScreen="/feelpost_screen";
   static String personalInfoScreen="/personalInfo_screen";
   static String settingScreen="/setting_screen";
+  static String passwordChangeScreen="/passwordChange_screen";
 
 
 
@@ -57,6 +59,7 @@ class AppRoutes{
      GetPage(name:feelpostScreen, page: ()=> FeelingPostScreen()),
      GetPage(name:personalInfoScreen, page: ()=> PersonalInfoScreen()),
      GetPage(name:settingScreen, page: ()=> SettingScreen()),
+     GetPage(name:passwordChangeScreen, page: ()=> ChangePasswordScreen()),
   ];
 
 
