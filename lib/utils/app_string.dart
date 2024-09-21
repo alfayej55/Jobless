@@ -50,6 +50,9 @@ class AppString {
   static String myGroupText=" My group list";
   static String settionText="setting";
   static String logoutText="logout";
+  static String myPostText="My Post";
+  static String myBioText="My Bio";
+  static String statusText="Status Show";
   //static String verifyEmailTExt="";
 
 }

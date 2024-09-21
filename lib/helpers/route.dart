@@ -6,7 +6,7 @@ import 'package:jobless/views/screen/Auth/signup_screen.dart';
 import 'package:jobless/views/screen/Home/feeling_post_screen.dart';
 import 'package:jobless/views/screen/Home/home_screen.dart';
 import 'package:jobless/views/screen/Home/Search/search_screen.dart';
-import 'package:jobless/views/screen/Profile/personal_info_screen.dart';
+import 'package:jobless/views/screen/Profile/parsonal_info/personal_info_screen.dart';
 import 'package:jobless/views/screen/Widget/view_friend_screen.dart';
 import 'package:jobless/views/screen/Message/message_screen.dart';
 import 'package:jobless/views/screen/Profile/profile_screen.dart';
