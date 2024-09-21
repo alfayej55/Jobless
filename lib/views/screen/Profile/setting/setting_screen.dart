@@ -54,7 +54,7 @@ class SettingScreen extends StatelessWidget {
             title:AppString.privacyText,
             icon: AppIcons.privaciIcon,
             onTap: (){
-
+              Get.toNamed(AppRoutes.privacyScreen);
             },
           ),
           SizedBox(height: 16.h),
@@ -62,7 +62,7 @@ class SettingScreen extends StatelessWidget {
             title:AppString.termConditionText,
             icon: AppIcons.termIcon,
             onTap: (){
-
+              Get.toNamed(AppRoutes.termsScreen);
             },
           ),
           SizedBox(height: 16.h),
@@ -70,7 +70,7 @@ class SettingScreen extends StatelessWidget {
             title:AppString.aboutusText,
             icon: AppIcons.aboutIcon,
             onTap: (){
-
+              Get.toNamed(AppRoutes.aboutsScreen);
             },
           ),
 
