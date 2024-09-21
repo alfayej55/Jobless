@@ -3,12 +3,14 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';
+import 'package:jobless/views/screen/Profile/parsonal_info/my_post_screen.dart';
 
 import '../../../../utils/app_colors.dart';
 import '../../../../utils/app_icons.dart';
 import '../../../../utils/app_string.dart';
 import '../../../../utils/style.dart';
 import '../../../base/casess_network_image.dart';
+import 'my_bio_screen.dart';
 
 class PersonalInfoScreen extends StatefulWidget {
   const PersonalInfoScreen({super.key});
@@ -58,6 +60,8 @@ class _PersonalInfoScreenState extends State<PersonalInfoScreen> {
 
       body: Column(
         children: [
+
+          /// User Profile Section
           Padding(
             padding:  EdgeInsets.symmetric(horizontal: 24.w),
             child: Container(
@@ -104,6 +108,8 @@ class _PersonalInfoScreenState extends State<PersonalInfoScreen> {
           ),
 
           SizedBox(height: 17,),
+
+          /// TabBar
           Padding(
             padding:  EdgeInsets.symmetric(horizontal: 20.w),
             child: Row(
@@ -141,6 +147,29 @@ class _PersonalInfoScreenState extends State<PersonalInfoScreen> {
             ),
           ),
 
+          /// Body List data
+
+          SizedBox(height: 20.h,),
+          Expanded(
+            child: AnimatedContainer(
+              duration: Duration(milliseconds: 400),
+              child: Builder(
+                builder: (context) {
+                  switch (currentIndex) {
+                    case 0:
+                      return MyPostScreen();
+                     case 1:
+                       return MyBioScreen();
+                    // case 2:
+                    //   return ActivityAwardScreen();
+            
+                    default:
+                      return SizedBox.shrink(); // You can return an empty widget or handle the default case as needed
+                  }
+                },
+              ),
+            ),
+          )
         ],
       ),
     );

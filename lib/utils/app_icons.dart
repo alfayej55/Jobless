@@ -23,6 +23,8 @@ class AppIcons{
   static String logOutIcon="$baseUrl/logout_icon.svg";
   static String menuIcon="$baseUrl/menu_icon.svg";
   static String settingIcon="$baseUrl/setting_icon.svg";
+  static String skillIcon="$baseUrl/skill_icon.svg";
+  static String phoneIcon="$baseUrl/phone.svg";
 
 
 
