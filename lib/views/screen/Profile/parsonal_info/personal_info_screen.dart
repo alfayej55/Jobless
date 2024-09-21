@@ -4,6 +4,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';
 import 'package:jobless/views/screen/Profile/parsonal_info/my_post_screen.dart';
+import 'package:jobless/views/screen/Profile/parsonal_info/status_dart.dart';
 
 import '../../../../utils/app_colors.dart';
 import '../../../../utils/app_icons.dart';
@@ -160,8 +161,8 @@ class _PersonalInfoScreenState extends State<PersonalInfoScreen> {
                       return MyPostScreen();
                      case 1:
                        return MyBioScreen();
-                    // case 2:
-                    //   return ActivityAwardScreen();
+                     case 2:
+                       return StatusScreen();
             
                     default:
                       return SizedBox.shrink(); // You can return an empty widget or handle the default case as needed

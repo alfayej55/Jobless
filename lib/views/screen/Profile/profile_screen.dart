@@ -3,6 +3,8 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';
 import 'package:jobless/helpers/route.dart';
+import 'package:jobless/views/base/custom_button.dart';
+import 'package:jobless/views/base/custom_outlinebutton.dart';
 
 import '../../../utils/app_colors.dart';
 import '../../../utils/app_icons.dart';
@@ -165,7 +167,9 @@ class ProfileScreen extends StatelessWidget {
             Customlisttile(
               title:AppString.logoutText,
               icon: AppIcons.logOutIcon,
-              onTap: (){},
+              onTap: (){
+                showCustomDialog(context);
+              },
             )
         
           ],
@@ -174,6 +178,28 @@ class ProfileScreen extends StatelessWidget {
     );
   }
 
+}
+
+void showCustomDialog(BuildContext context) {
+  showDialog(
+    context: context,
+    builder: (BuildContext context) {
+      return AlertDialog(
+        title: Text("Logout",style: AppStyles.h2(),),
+        content: Text("Are you sure you want to log out ?"),
+        actions: [
+          CustomOutlineButton(
+              width: 55,
+              onTap: (){}, text: 'No'),
+
+           CustomButton(
+             width: 55,
+               onTap: (){}, text: 'Yes'),
+
+        ],
+      );
+    },
+  );
 }
 
 class ClipPathClass extends CustomClipper<Path> {
