@@ -159,7 +159,9 @@ class ProfileScreen extends StatelessWidget {
             Customlisttile(
               title:AppString.settionText,
               icon: AppIcons.settingIcon,
-              onTap: (){},
+              onTap: (){
+                Get.toNamed(AppRoutes.settingScreen);
+              },
             ),
 
 
