@@ -49,7 +49,6 @@ class SettingScreen extends StatelessWidget {
             onTap: (){},
           ),
 
-
           SizedBox(height: 16.h),
           Customlisttile(
             title:AppString.privacyText,
