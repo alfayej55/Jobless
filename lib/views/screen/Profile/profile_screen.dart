@@ -9,6 +9,7 @@ import '../../../utils/app_string.dart';
 import '../../../utils/style.dart';
 import '../../base/bottom_menu..dart';
 import '../../base/casess_network_image.dart';
+import '../Widget/customListtile.dart';
 
 class ProfileScreen extends StatelessWidget {
   const ProfileScreen({super.key});
@@ -20,74 +21,80 @@ class ProfileScreen extends StatelessWidget {
 
       body: Column(
         children: [
-          Container(
-            width: double.infinity,
-            decoration: BoxDecoration(
-              color: AppColors.primaryColor
-            ),
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.center,
-              children: [
-                SizedBox(height: 40,),
-                Row(
-                 // mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    InkWell(
-                      onTap: () {
-                        Get.back();
-                      },
-                      child: CircleAvatar(
-                          radius: 20,
-                          backgroundColor: Colors.transparent,
-                          child: Icon(
-                            Icons.arrow_back_ios,
-                            color: Colors.white,
-                          )),
-                    ),
-                    Align(
-                      alignment: Alignment.topCenter,
-                      child: Text(
-                          AppString.profileText,
+
+          ClipPath(
+            clipper: ClipPathClass(),
+            child: Container(
+              width: double.infinity,
+              decoration: BoxDecoration(
+                color: AppColors.primaryColor,
+              ),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: [
+                  SizedBox(height: 40,),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      InkWell(
+                        onTap: () {
+                          Get.back();
+                        },
+                        child: CircleAvatar(
+                            radius: 20,
+                            backgroundColor: Colors.transparent,
+                            child: Icon(
+                              Icons.arrow_back_ios,
+                              color: Colors.white,
+                            )),
+                      ),
+                      Align(
+                        alignment: Alignment.topCenter,
+                        child: Text(
+                            AppString.profileText,
+                            style: AppStyles.h4(color: Colors.white)
+                        ),
+                      ),
+                      SizedBox(width: 30.w,)
+                    ],
+                  ),
+                  CustomNetworkImage(
+                    imageUrl: "https://www.befunky.com/images/prismic/82e0e255-17f9-41e0-85f1-210163b0ea34_hero-blur-image-3.jpg?auto=avif,webp&format=jpg&width=896",
+                    height: 120.h,
+                    width: 120.w,
+                    border: Border.all(color: Colors.white,width: 3),
+                    boxShape: BoxShape.circle,
+                  ),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Text(
+                          "MD AL-FAYEJ",
                           style: AppStyles.h4(color: Colors.white)
                       ),
-                    ),
-                  ],
-                ),
-                CustomNetworkImage(
-                  imageUrl: "https://www.befunky.com/images/prismic/82e0e255-17f9-41e0-85f1-210163b0ea34_hero-blur-image-3.jpg?auto=avif,webp&format=jpg&width=896",
-                  height: 120.h,
-                  width: 120.w,
-                  border: Border.all(color: Colors.white,width: 3),
-                  boxShape: BoxShape.circle,
-                ),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    Text(
-                        "MD AL-FAYEJ",
-                        style: AppStyles.h4(color: Colors.white)
-                    ),
-                    SizedBox(width: 5,),
-                    SvgPicture.asset(AppIcons.tiomarkIcon,color: Colors.white,),
-                  ],
-                ),
-                SizedBox(height: 8.h,),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    SvgPicture.asset(AppIcons.starIcon,color: Colors.white,),
-                    SizedBox(width: 5.w,),
-                    Text(
-                        "Full-time student",
-                        style: AppStyles.h6(color: Colors.white)
-                    ),
-                  ],
-                ),
+                      SizedBox(width: 5,),
+                      SvgPicture.asset(AppIcons.tiomarkIcon,color: Colors.white,),
+                    ],
+                  ),
+                  SizedBox(height: 8.h,),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      SvgPicture.asset(AppIcons.starIcon,color: Colors.white,),
+                      SizedBox(width: 5.w,),
+                      Text(
+                          "Full-time student",
+                          style: AppStyles.h6(color: Colors.white)
+                      ),
+                    ],
+                  ),
 
-
-              ],
+                  SizedBox(height: 30.h,)
+                ],
+              ),
             ),
           ),
+
 
 
           SizedBox(height: 16.h),
@@ -128,6 +135,13 @@ class ProfileScreen extends StatelessWidget {
                 ],
               ),
             ),
+          ),
+
+          SizedBox(height: 16),
+          Customlisttile(
+            title:'Personal information',
+            icon: AppIcons.profileIcon,
+            onTap: (){},
           )
 
         ],
@@ -135,16 +149,38 @@ class ProfileScreen extends StatelessWidget {
     );
   }
 
+}
 
-  customListTile(){
-    return Container(
-      decoration: BoxDecoration(
-        border: Border.all(color: AppColors.primaryColor)
-      ),
-      child: ListTile(
+class ClipPathClass extends CustomClipper<Path> {
+  @override
+  Path getClip(Size size) {
+    var path = Path();
 
-      ),
-    );
+    // Start at the top left
+    path.moveTo(0, 0);
+
+    // Draw a straight line to the top right corner
+    path.lineTo(size.width, 0);
+
+    // Draw a line to the bottom right, leaving space for the curve
+    path.lineTo(size.width, size.height.h - 15);
+
+    // Create a curve at the bottom-right corner
+    var controlPointRight = Offset(size.width.w / 2, size.height.h + 40.h);
+    var endPointRight = Offset(0, size.height.h - 15);
+    path.quadraticBezierTo(
+        controlPointRight.dx, controlPointRight.dy, endPointRight.dx, endPointRight.dy);
+
+    // Line to the bottom-left corner
+    path.lineTo(0, size.height.h - 30);
+
+    // Close the path
+    path.lineTo(0, 0);
+
+    return path;
   }
 
+  @override
+  bool shouldReclip(CustomClipper<Path> oldClipper) => true;
 }
+
