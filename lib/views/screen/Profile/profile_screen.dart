@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';
+import 'package:jobless/helpers/route.dart';
 
 import '../../../utils/app_colors.dart';
 import '../../../utils/app_icons.dart';
@@ -33,22 +34,9 @@ class ProfileScreen extends StatelessWidget {
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
-                    SizedBox(height: 40.h,),
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        InkWell(
-                          onTap: () {
-                            Get.back();
-                          },
-                          child: CircleAvatar(
-                              radius: 20.r,
-                              backgroundColor: Colors.transparent,
-                              child: Icon(
-                                Icons.arrow_back_ios,
-                                color: Colors.white,
-                              )),
-                        ),
+
+                    SizedBox(height: 50.h,),
+
                         Align(
                           alignment: Alignment.topCenter,
                           child: Text(
@@ -56,9 +44,7 @@ class ProfileScreen extends StatelessWidget {
                               style: AppStyles.h4(color: Colors.white)
                           ),
                         ),
-                        SizedBox(width: 30.w,)
-                      ],
-                    ),
+                    SizedBox(height: 10.h,),
                     CustomNetworkImage(
                       imageUrl: "https://www.befunky.com/images/prismic/82e0e255-17f9-41e0-85f1-210163b0ea34_hero-blur-image-3.jpg?auto=avif,webp&format=jpg&width=896",
                       height: 120.h,
@@ -143,32 +129,41 @@ class ProfileScreen extends StatelessWidget {
             /// inpormation
         
             Customlisttile(
-              title:'Personal information',
+              title:AppString.personalInfoText,
               icon: AppIcons.profileIcon,
-              onTap: (){},
+              onTap: (){
+                Get.toNamed(AppRoutes.personalInfoScreen);
+              },
             ),
+
+
             SizedBox(height: 16.h),
             Customlisttile(
-              title:'My friends list',
+              title:AppString.myFriendText,
               icon: AppIcons.friendlistIcon,
               onTap: (){},
             ),
+
+
             SizedBox(height: 16.h),
             Customlisttile(
-              title:'My group list',
+              title:AppString.myGroupText,
               icon: AppIcons.menuIcon,
               onTap: (){},
             ),
 
+
             SizedBox(height: 16.h),
             Customlisttile(
-              title:'setting',
+              title:AppString.settionText,
               icon: AppIcons.settingIcon,
               onTap: (){},
             ),
+
+
             SizedBox(height: 16.h),
             Customlisttile(
-              title:'logout',
+              title:AppString.logoutText,
               icon: AppIcons.logOutIcon,
               onTap: (){},
             )

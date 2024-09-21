@@ -45,6 +45,11 @@ class AppString {
   static String postText="Post";
   static String notificationText="Notification";
   static String profileText="Profile";
+  static String personalInfoText="Personal information";
+  static String myFriendText=" My friends list";
+  static String myGroupText=" My group list";
+  static String settionText="setting";
+  static String logoutText="logout";
   //static String verifyEmailTExt="";
 
 }

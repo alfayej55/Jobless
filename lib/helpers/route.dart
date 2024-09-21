@@ -6,6 +6,7 @@ import 'package:jobless/views/screen/Auth/signup_screen.dart';
 import 'package:jobless/views/screen/Home/feeling_post_screen.dart';
 import 'package:jobless/views/screen/Home/home_screen.dart';
 import 'package:jobless/views/screen/Home/Search/search_screen.dart';
+import 'package:jobless/views/screen/Profile/personal_info_screen.dart';
 import 'package:jobless/views/screen/Widget/view_friend_screen.dart';
 import 'package:jobless/views/screen/Message/message_screen.dart';
 import 'package:jobless/views/screen/Profile/profile_screen.dart';
@@ -32,6 +33,8 @@ class AppRoutes{
   static String searchScreen="/search_screen";
   static String viewFriendScreen="/viewFriend_screen";
   static String feelpostScreen="/feelpost_screen";
+  static String personalInfoScreen="/personalInfo_screen";
+
 
 
  static List<GetPage> page=[
@@ -50,6 +53,7 @@ class AppRoutes{
      GetPage(name:searchScreen, page: ()=> SearchScreen()),
      GetPage(name:viewFriendScreen, page: ()=> ViewFriendScreen()),
      GetPage(name:feelpostScreen, page: ()=> FeelingPostScreen()),
+     GetPage(name:personalInfoScreen, page: ()=> PersonalInfoScreen()),
   ];
 
 
