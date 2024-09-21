@@ -53,6 +53,11 @@ class AppString {
   static String myPostText="My Post";
   static String myBioText="My Bio";
   static String statusText="Status Show";
+  static String changePasswordText="Change Password";
+  static String privacyText="Privacy policy";
+  static String termConditionText="Terms & conditions";
+  static String aboutusText="About us";
+  static String supportText="support";
   //static String verifyEmailTExt="";
 
 }
