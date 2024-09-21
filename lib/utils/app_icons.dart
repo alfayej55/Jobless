@@ -25,6 +25,9 @@ class AppIcons{
   static String settingIcon="$baseUrl/setting_icon.svg";
   static String skillIcon="$baseUrl/skill_icon.svg";
   static String phoneIcon="$baseUrl/phone.svg";
+  static String termIcon="$baseUrl/term_icon.svg";
+  static String aboutIcon="$baseUrl/about_icon.svg";
+  static String supportIcon="$baseUrl/support_icon.svg";
 
 
 
