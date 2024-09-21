@@ -58,6 +58,7 @@ class AppString {
   static String termConditionText="Terms & conditions";
   static String aboutusText="About us";
   static String supportText="support";
+  static String friendListText="Friends list";
 
   //static String verifyEmailTExt="";
 
