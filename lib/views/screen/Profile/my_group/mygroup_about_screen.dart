@@ -100,7 +100,9 @@ class MyGroupAboutScreen extends StatelessWidget {
               children: [
                 CustomButton(
                     padding: EdgeInsets.symmetric(horizontal: 24.w),
-                    onTap: (){}, text:'inviting people'),
+                    onTap: (){
+                      Get.toNamed(AppRoutes.invitePeopleScreen);
+                    }, text:'inviting people'),
                 SizedBox(height:10.h,),
                 CustomOutlineButton(
                     padding: EdgeInsets.symmetric(horizontal: 24.w),

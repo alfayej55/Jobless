@@ -7,7 +7,9 @@ import 'package:jobless/views/screen/Home/feeling_post_screen.dart';
 import 'package:jobless/views/screen/Home/home_screen.dart';
 import 'package:jobless/views/screen/Home/Search/search_screen.dart';
 import 'package:jobless/views/screen/Profile/my_group/create_group.dart';
+import 'package:jobless/views/screen/Profile/my_group/inviting_people_screen.dart';
 import 'package:jobless/views/screen/Profile/my_group/mygroup_about_screen.dart';
+import 'package:jobless/views/screen/Profile/payment/subscription_screen.dart';
 import 'package:jobless/views/screen/Widget/friend_profile.dart';
 import 'package:jobless/views/screen/Profile/friend_list/my_friends_screen.dart';
 import 'package:jobless/views/screen/Profile/my_group/about_group_screen.dart';
@@ -61,6 +63,8 @@ class AppRoutes{
   static String seeALlMemberScreen="/seeAllMember_screen";
   static String createGroupScreen="/createGroup_screen";
   static String myGroupAboutScreen="/myAboutGroup_screen";
+  static String invitePeopleScreen="/invitingPeople_screen";
+  static String subscriptionsScreen="/subscriptions_screen";
 
 
 
@@ -94,6 +98,8 @@ class AppRoutes{
      GetPage(name:seeALlMemberScreen, page: ()=> SeeAllMember()),
      GetPage(name:createGroupScreen, page: ()=> CreateGroupScreen()),
      GetPage(name:myGroupAboutScreen, page: ()=> MyGroupAboutScreen()),
+     GetPage(name:invitePeopleScreen, page: ()=> InvitingPeopleScreen()),
+     GetPage(name:subscriptionsScreen, page: ()=> SubscriptionScreen()),
   ];
 
 
