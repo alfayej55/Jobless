@@ -56,7 +56,7 @@ class AppStyles {
         fontFamily: family ?? 'DMSans',
         height: height,
         letterSpacing: letterSpacing,
-        fontWeight: fontWeight ?? FontWeight.w400);
+        fontWeight: fontWeight ?? FontWeight.w500);
   }
 
   static TextStyle h5(

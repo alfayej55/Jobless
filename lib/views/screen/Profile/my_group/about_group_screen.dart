@@ -1,21 +1,17 @@
-
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';
-import 'package:jobless/helpers/route.dart';
 import 'package:jobless/utils/app_string.dart';
-import 'package:jobless/views/base/custom_button.dart';
 
 import '../../../../utils/app_colors.dart';
 import '../../../../utils/app_icons.dart';
-import '../../../../utils/app_image.dart';
 import '../../../../utils/style.dart';
 import '../../../base/casess_network_image.dart';
-import '../../Widget/post_card.dart';
+import '../../Widget/my_friend_cart.dart';
 
-class ViewGroupScreen extends StatelessWidget {
-  const ViewGroupScreen({super.key});
+class AboutGroupScreen extends StatelessWidget {
+  const AboutGroupScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -28,7 +24,6 @@ class ViewGroupScreen extends StatelessWidget {
             Get.back();
           },
 
-
           child: CircleAvatar(
               radius: 12,
               backgroundColor: Colors.transparent,
@@ -37,26 +32,68 @@ class ViewGroupScreen extends StatelessWidget {
         backgroundColor: Colors.transparent,
 
       ),
+      body: Column(
 
-      body: SingleChildScrollView(
-        child: Column(
+        mainAxisAlignment: MainAxisAlignment.start,
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
 
-          children: [
-            /// Group Hader
-            groupHadder(),
-            SizedBox(height: 16.h,),
-            /// Search Section
-            searchSection(),
-            /// post Section
-            postCartSection()
+          /// Hader
+          groupHadder(),
+          SizedBox(height: 16.h,),
 
-          ],
-        ),
+          /// Descriptions
+          Padding(
+            padding:  EdgeInsets.symmetric(horizontal: 24.w),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text(AppString.descriptionsText,style: AppStyles.h4(family: 'Schuyler'),),
+                SizedBox(height: 10.h,),
+                Text('will be distracted by the readable content of a page when looking at its layout. Normal distribution of letters, as opposed to using Content herewill be distracted by the readable content of a page when looking at its layout. Normal distribution of letters, as opposed to using Content here',
+                  style:AppStyles.h5(),)
+              ],
+            ),
+          ),
+
+          SizedBox(height: 16.h,),
+          Padding(
+            padding:  EdgeInsets.symmetric(horizontal: 24.w),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Text(AppString.memberText,style: AppStyles.h4(family: 'Schuyler'),),
+                Text(AppString.seeALlText,style: AppStyles.h5(family: 'Schuyler'),),
+              ],
+            ),
+          ),
+
+        /// Member List
+        Expanded(
+
+          child: ListView.builder(
+            itemCount: 5,
+            shrinkWrap: true,
+            primary: false,
+            itemBuilder: (context,insdex){
+              return MyFriendCard(
+                onTab: (){
+          
+                  //Get.toNamed(AppRoutes.viewGroupScreen);
+          
+                },
+                buttonTitle: 'View',
+                icon: AppIcons.starIcon,
+              );
+            }),
+        )
+
+        ],
       ),
     );
+
   }
-
-
+  /// Hader
   groupHadder(){
     return  Padding(
       padding:  EdgeInsets.symmetric(horizontal: 24.w),
@@ -102,14 +139,7 @@ class ViewGroupScreen extends StatelessWidget {
                     ),
                   ),
                   SizedBox(width: 30.w),
-                  CustomButton(
-                    height: 30.h,
-                    width: 30.w,
-                    onTap: () {
-                      Get.toNamed(AppRoutes.aboutGroupScreen);
-                    },
-                    text: AppString.aboutText,
-                  )
+
                 ],
               ),
             ),
@@ -119,63 +149,4 @@ class ViewGroupScreen extends StatelessWidget {
     );
 
   }
-
-  searchSection(){
-    return               /// Searech Section
-      Padding(
-        padding:  EdgeInsets.symmetric(horizontal: 24.w,vertical: 10.w),
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          children: [
-            Container(
-              height:48.h,
-              width: 48.w,
-              decoration: BoxDecoration(
-                shape: BoxShape.circle,
-                image: DecorationImage(image: AssetImage(AppImage.personImage)),
-              ),
-            ),
-            InkWell(
-              onTap: (){
-                Get.toNamed(AppRoutes.feelpostScreen);
-              },
-              child: Container(
-                height: 46.h,
-                width: 240.w,
-                decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(23).r,
-                    color: Colors.white,
-                    boxShadow: [
-                      AppStyles.boxShadow
-                    ]
-                ),
-                child: Center(child: Text(AppString.homeSearchText,style: AppStyles.customSize(size:10,fontWeight: FontWeight.w400,family: "Schuyler",color: AppColors.dark2Color),)),
-              ),
-            ),
-            SvgPicture.asset(AppIcons.gelaryIcon,height: 21,width: 23,)
-          ],
-        ),
-      );
-  }
-
-  postCartSection(){
-    return Padding(
-      padding:  EdgeInsets.symmetric(horizontal: 24.w),
-      child: ListView.separated(
-        itemCount: 5,
-        shrinkWrap: true,
-        primary: false,
-        itemBuilder: (context,index){
-          return  PostCart();
-        },
-        separatorBuilder: (context,index){
-          return Divider(
-              color: Color(0xffC4D3F6)
-          );
-        },
-      ),
-    );
-  }
-
-
 }
