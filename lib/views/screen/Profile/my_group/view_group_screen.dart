@@ -102,11 +102,14 @@ class ViewGroupScreen extends StatelessWidget {
                     ),
                   ),
                   SizedBox(width: 30.w),
+
+                  /// Aboute Button
+
                   CustomButton(
                     height: 30.h,
                     width: 30.w,
                     onTap: () {
-                      Get.toNamed(AppRoutes.aboutGroupScreen);
+                      Get.toNamed(AppRoutes.myGroupAboutScreen);
                     },
                     text: AppString.aboutText,
                   )
@@ -121,7 +124,7 @@ class ViewGroupScreen extends StatelessWidget {
   }
 
   searchSection(){
-    return               /// Searech Section
+    return
       Padding(
         padding:  EdgeInsets.symmetric(horizontal: 24.w,vertical: 10.w),
         child: Row(

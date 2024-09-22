@@ -5,6 +5,7 @@ import 'package:jobless/utils/app_icons.dart';
 
 import '../../../../helpers/route.dart';
 import '../../Widget/my_friend_cart.dart';
+import '../../Widget/my_group_request_card.dart';
 
 class JoinGroupScreen extends StatelessWidget {
   const JoinGroupScreen({super.key});
@@ -16,7 +17,7 @@ class JoinGroupScreen extends StatelessWidget {
         shrinkWrap: true,
         primary: false,
         itemBuilder: (context,insdex){
-          return MyFriendCard(
+          return MyGroupRequestCard(
             onTab: (){
 
               Get.toNamed(AppRoutes.viewGroupScreen);
