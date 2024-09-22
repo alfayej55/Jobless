@@ -2,7 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';
+import 'package:jobless/helpers/route.dart';
 import 'package:jobless/utils/app_string.dart';
+import 'package:jobless/views/base/custom_button.dart';
 
 import '../../../../utils/app_colors.dart';
 import '../../../../utils/app_icons.dart';
@@ -63,7 +65,11 @@ class AboutGroupScreen extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 Text(AppString.memberText,style: AppStyles.h4(family: 'Schuyler'),),
-                Text(AppString.seeALlText,style: AppStyles.h5(family: 'Schuyler'),),
+                InkWell(
+                  onTap: (){
+                    Get.toNamed(AppRoutes.seeALlMemberScreen);
+                  },
+                    child: Text(AppString.seeALlText,style: AppStyles.h5(family: 'Schuyler'),)),
               ],
             ),
           ),
@@ -86,8 +92,12 @@ class AboutGroupScreen extends StatelessWidget {
                 icon: AppIcons.starIcon,
               );
             }),
-        )
-
+        ),
+          /// Button
+          
+          CustomButton(
+            padding: EdgeInsets.symmetric(horizontal: 24.w,vertical: 15.h),
+              onTap: (){}, text: AppString.leaveGroupText)
         ],
       ),
     );

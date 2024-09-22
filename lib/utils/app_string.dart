@@ -66,6 +66,7 @@ class AppString {
   static String descriptionsText="Description";
   static String memberText="Members";
   static String seeALlText="See All";
+  static String leaveGroupText="Leave Group";
 
   //static String verifyEmailTExt="";
 
