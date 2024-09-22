@@ -6,7 +6,7 @@ import 'package:jobless/views/screen/Auth/signup_screen.dart';
 import 'package:jobless/views/screen/Home/feeling_post_screen.dart';
 import 'package:jobless/views/screen/Home/home_screen.dart';
 import 'package:jobless/views/screen/Home/Search/search_screen.dart';
-import 'package:jobless/views/screen/Profile/friend_list/inner_widget/view_friend.dart';
+import 'package:jobless/views/screen/Widget/friend_profile.dart';
 import 'package:jobless/views/screen/Profile/friend_list/my_friends_screen.dart';
 import 'package:jobless/views/screen/Profile/my_group/about_group_screen.dart';
 import 'package:jobless/views/screen/Profile/my_group/my_group_screen.dart';
@@ -52,7 +52,7 @@ class AppRoutes{
   static String termsScreen="/term_screen";
   static String aboutsScreen="/about_screen";
   static String friendlistScreen="/friendList_screen";
-  static String friendRequestViewcreen="/friendRequestView_screen";
+  static String friendprofileViewcreen="/friendRequestView_screen";
   static String myGroupscreen="/myGroup_screen";
   static String viewGroupScreen="/viewGroup_screen";
   static String aboutGroupScreen="/aboutGroup_screen";
@@ -83,7 +83,7 @@ class AppRoutes{
      GetPage(name:termsScreen, page: ()=> TermsOFCondititonsScreen()),
      GetPage(name:aboutsScreen, page: ()=> AboutScreen()),
      GetPage(name:friendlistScreen, page: ()=> FriendListScreen()),
-     GetPage(name:friendRequestViewcreen, page: ()=> FriendRequestViewScreen()),
+     GetPage(name:friendprofileViewcreen, page: ()=> FriendProfileViewScreen()),
      GetPage(name:myGroupscreen, page: ()=> MyGroupScreen()),
      GetPage(name:viewGroupScreen, page: ()=> ViewGroupScreen()),
      GetPage(name:aboutGroupScreen, page: ()=> AboutGroupScreen()),

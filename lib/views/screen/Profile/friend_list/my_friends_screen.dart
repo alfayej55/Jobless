@@ -20,7 +20,7 @@ class MyFriendScreen extends StatelessWidget {
         itemBuilder: (context,insdex){
           return MyFriendCard(
             onTab: (){
-              Get.toNamed(AppRoutes.friendRequestViewcreen);
+              Get.toNamed(AppRoutes.friendprofileViewcreen);
             },
           );
         });

@@ -9,12 +9,12 @@ import 'package:jobless/utils/app_icons.dart';
 import 'package:jobless/utils/app_string.dart';
 import 'package:jobless/views/base/custom_button.dart';
 
-import '../../../../../utils/style.dart';
-import '../../../../base/casess_network_image.dart';
+import '../../../utils/style.dart';
+import '../../base/casess_network_image.dart';
 
 
-class FriendRequestViewScreen extends StatelessWidget {
-  const FriendRequestViewScreen({super.key});
+class FriendProfileViewScreen extends StatelessWidget {
+  const FriendProfileViewScreen({super.key});
 
   @override
   Widget build(BuildContext context) {

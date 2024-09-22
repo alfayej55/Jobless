@@ -21,7 +21,7 @@ class FriendAcceptCard extends StatelessWidget {
       minVerticalPadding: 8.h,
       leading:InkWell(
         onTap: (){
-          Get.toNamed(AppRoutes.friendRequestViewcreen);
+          Get.toNamed(AppRoutes.friendprofileViewcreen);
         },
         child: CustomNetworkImage(
           imageUrl: "https://www.befunky.com/images/prismic/82e0e255-17f9-41e0-85f1-210163b0ea34_hero-blur-image-3.jpg?auto=avif,webp&format=jpg&width=896",
