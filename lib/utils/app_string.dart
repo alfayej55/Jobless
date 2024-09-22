@@ -62,6 +62,7 @@ class AppString {
   static String friendListText="Friends list";
   static String acceptText="Accept";
   static String deleteText="Delete";
+  static String aboutGrougText="about group";
 
   //static String verifyEmailTExt="";
 

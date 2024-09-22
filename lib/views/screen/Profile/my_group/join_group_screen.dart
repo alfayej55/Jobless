@@ -1,7 +1,9 @@
 
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:jobless/utils/app_icons.dart';
 
+import '../../../../helpers/route.dart';
 import '../../Widget/my_friend_cart.dart';
 
 class JoinGroupScreen extends StatelessWidget {
@@ -17,7 +19,8 @@ class JoinGroupScreen extends StatelessWidget {
           return MyFriendCard(
             onTab: (){
 
-              //Get.toNamed(AppRoutes.friendRequestViewcreen);
+              Get.toNamed(AppRoutes.viewGroupScreen);
+
             },
             buttonTitle: 'Join',
             icon: AppIcons.friendlistIcon,
