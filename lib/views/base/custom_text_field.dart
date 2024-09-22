@@ -18,6 +18,7 @@ class CustomTextField extends StatefulWidget {
   final Widget? suffixIcon;
   final FormFieldValidator? validator;
   final bool isPassword;
+  final int? maxLine;
   final bool? isEmail;
 
   const CustomTextField(
@@ -25,6 +26,7 @@ class CustomTextField extends StatefulWidget {
       this.contentPaddingHorizontal,
       this.contentPaddingVertical,
       this.hintText,
+        this.maxLine,
       this.prefixIcon,
       this.suffixIcon,
       this.validator,
@@ -56,6 +58,7 @@ class _CustomTextFieldState extends State<CustomTextField> {
       controller: widget.controller,
       keyboardType: widget.keyboardType,
       obscuringCharacter: widget.obscure!,
+      maxLines: widget.maxLine??1,
       // validator: widget.validator,
       validator: widget.validator ??
           (value) {
