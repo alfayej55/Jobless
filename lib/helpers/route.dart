@@ -6,6 +6,7 @@ import 'package:jobless/views/screen/Auth/signup_screen.dart';
 import 'package:jobless/views/screen/Home/feeling_post_screen.dart';
 import 'package:jobless/views/screen/Home/home_screen.dart';
 import 'package:jobless/views/screen/Home/Search/search_screen.dart';
+import 'package:jobless/views/screen/Message/inbox_screen.dart';
 import 'package:jobless/views/screen/Profile/my_group/create_group.dart';
 import 'package:jobless/views/screen/Profile/my_group/inviting_people_screen.dart';
 import 'package:jobless/views/screen/Profile/my_group/mygroup_about_screen.dart';
@@ -65,6 +66,7 @@ class AppRoutes{
   static String myGroupAboutScreen="/myAboutGroup_screen";
   static String invitePeopleScreen="/invitingPeople_screen";
   static String subscriptionsScreen="/subscriptions_screen";
+  static String messageInboxScreen="/messageInbox_screen";
 
 
 
@@ -73,7 +75,7 @@ class AppRoutes{
     GetPage(name:onboardingScreen, page: ()=>const OnBoardingScreen1()),
     GetPage(name:homeScreen, page: ()=>const HomeScreen(),transition:Transition.noTransition),
     GetPage(name:notificationScreen, page: ()=>const NotificationScreen(),transition:Transition.noTransition),
-    GetPage(name:messageScreen, page: ()=>const MessageScreen(),transition:Transition.noTransition),
+    GetPage(name:messageScreen, page: ()=> MessageScreen(),transition:Transition.noTransition),
     GetPage(name:profileScreen, page: ()=>const ProfileScreen(),transition: Transition.noTransition),
      GetPage(name:jobConfirmScreen, page: ()=>const JobConfiramScreen()),
      GetPage(name:jobCategoriScreen, page: ()=>const JoblessCategoricScreen()),
@@ -100,6 +102,7 @@ class AppRoutes{
      GetPage(name:myGroupAboutScreen, page: ()=> MyGroupAboutScreen()),
      GetPage(name:invitePeopleScreen, page: ()=> InvitingPeopleScreen()),
      GetPage(name:subscriptionsScreen, page: ()=> SubscriptionScreen()),
+     GetPage(name:messageInboxScreen, page: ()=> MessageInboxScreen()),
   ];
 
 

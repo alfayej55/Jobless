@@ -31,6 +31,8 @@ class AppIcons{
   static String privaciIcon="$baseUrl/privacy_icon.svg";
   static String addIcon="$baseUrl/add_icon.svg";
   static String uploadIcon="$baseUrl/upload_icon.svg";
+  static String fileIcon="$baseUrl/file_icon.svg";
+  static String sentIcon="$baseUrl/sent_icon.svg";
 
 
 }
