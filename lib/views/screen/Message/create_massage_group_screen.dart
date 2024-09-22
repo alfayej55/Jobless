@@ -5,6 +5,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';
 import 'package:image_picker/image_picker.dart';
+import 'package:jobless/helpers/route.dart';
 import 'package:jobless/views/base/custom_button.dart';
 import 'package:jobless/views/base/custom_text_field.dart';
 
@@ -110,7 +111,9 @@ class MessageGroupCreateScreen extends StatelessWidget {
             Align(
               alignment: Alignment.bottomCenter,
 
-                child: CustomButton(onTap: (){}, text: 'Next'))
+                child: CustomButton(onTap: (){
+                  Get.toNamed(AppRoutes.messageGroupCreaatefriendChoiceScreen);
+                }, text: 'Next'))
           ],
         ),
       ),
