@@ -7,6 +7,7 @@ import 'package:get/get.dart';
 import 'package:jobless/utils/app_colors.dart';
 import 'package:jobless/utils/app_icons.dart';
 import 'package:jobless/utils/app_string.dart';
+import 'package:jobless/views/base/custom_button.dart';
 
 import '../../../../../utils/style.dart';
 import '../../../../base/casess_network_image.dart';
@@ -243,8 +244,10 @@ class FriendRequestViewScreen extends StatelessWidget {
               )
           ),
 
-
-
+          
+          CustomButton(
+            padding: EdgeInsets.only(top: 25.h,bottom: 15.h),
+              onTap:(){}, text: 'removed user'),
           SizedBox(height: 30.h,),
 
         ],
