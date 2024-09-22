@@ -59,6 +59,8 @@ class AppString {
   static String aboutusText="About us";
   static String supportText="support";
   static String friendListText="Friends list";
+  static String acceptText="Accept";
+  static String deleteText="Delete";
 
   //static String verifyEmailTExt="";
 

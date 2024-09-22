@@ -21,7 +21,6 @@ class _FriendListScreenState extends State<FriendListScreen> {
     return DefaultTabController(
       length: tabbarList.length,
       child: Scaffold(
-
         appBar:  AppBar(
           centerTitle: true,
           leading: InkWell(
@@ -68,6 +67,7 @@ class _FriendListScreenState extends State<FriendListScreen> {
             Expanded(
               child: TabBarView(
                 children: [
+
 
                 ],
               ),
