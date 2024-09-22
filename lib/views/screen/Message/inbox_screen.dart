@@ -100,12 +100,15 @@ class _MessageInboxScreenState extends State<MessageInboxScreen> {
 
      
             Expanded(
-              child: Column(
+              child: Padding(
+                padding:  EdgeInsets.symmetric(horizontal: 24.w),
+                child: Column(
 
-                children: [
-                  senderBubble(context,),
-                  receiverBubble(context,),
-                ],
+                  children: [
+                    senderBubble(context,),
+                    receiverBubble(context,),
+                  ],
+                ),
               ),
             ),
 

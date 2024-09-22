@@ -34,7 +34,7 @@ class MessageScreen extends StatelessWidget {
           /// Crease Group Button
             InkWell(
               onTap: (){
-               // Get.toNamed(AppRoutes.createGroupScreen);
+                Get.toNamed(AppRoutes.messageGroupCreaateScreen);
               },
               child: Align(
                 alignment: Alignment.topRight,
