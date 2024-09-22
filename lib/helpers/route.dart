@@ -6,6 +6,7 @@ import 'package:jobless/views/screen/Auth/signup_screen.dart';
 import 'package:jobless/views/screen/Home/feeling_post_screen.dart';
 import 'package:jobless/views/screen/Home/home_screen.dart';
 import 'package:jobless/views/screen/Home/Search/search_screen.dart';
+import 'package:jobless/views/screen/Profile/my_group/create_group.dart';
 import 'package:jobless/views/screen/Widget/friend_profile.dart';
 import 'package:jobless/views/screen/Profile/friend_list/my_friends_screen.dart';
 import 'package:jobless/views/screen/Profile/my_group/about_group_screen.dart';
@@ -57,6 +58,7 @@ class AppRoutes{
   static String viewGroupScreen="/viewGroup_screen";
   static String aboutGroupScreen="/aboutGroup_screen";
   static String seeALlMemberScreen="/seeAllMember_screen";
+  static String createGroupScreen="/createGroup_screen";
 
 
 
@@ -88,6 +90,7 @@ class AppRoutes{
      GetPage(name:viewGroupScreen, page: ()=> ViewGroupScreen()),
      GetPage(name:aboutGroupScreen, page: ()=> AboutGroupScreen()),
      GetPage(name:seeALlMemberScreen, page: ()=> SeeAllMember()),
+     GetPage(name:createGroupScreen, page: ()=> CreateGroupScreen()),
   ];
 
 
