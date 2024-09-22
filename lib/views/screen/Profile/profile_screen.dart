@@ -138,12 +138,14 @@ class ProfileScreen extends StatelessWidget {
               },
             ),
 
-
+         /// My Friend List
             SizedBox(height: 16.h),
             Customlisttile(
               title:AppString.myFriendText,
               icon: AppIcons.friendlistIcon,
-              onTap: (){},
+              onTap: (){
+                Get.toNamed(AppRoutes.friendlistScreen);
+              },
             ),
 
 

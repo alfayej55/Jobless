@@ -6,6 +6,7 @@ import 'package:jobless/views/screen/Auth/signup_screen.dart';
 import 'package:jobless/views/screen/Home/feeling_post_screen.dart';
 import 'package:jobless/views/screen/Home/home_screen.dart';
 import 'package:jobless/views/screen/Home/Search/search_screen.dart';
+import 'package:jobless/views/screen/Profile/friend_list/my_friends_screen.dart';
 import 'package:jobless/views/screen/Profile/parsonal_info/personal_info_screen.dart';
 import 'package:jobless/views/screen/Profile/setting/about_screen.dart';
 import 'package:jobless/views/screen/Profile/setting/change_password_screen.dart';
@@ -19,6 +20,7 @@ import 'package:jobless/views/screen/onboarding_screen/job_confirmetion_screen.d
 import 'package:jobless/views/screen/onboarding_screen/jobless_categoric_screen.dart';
 import 'package:jobless/views/screen/onboarding_screen/onboarding_screen1.dart';
 import '../views/screen/Notification/notification_screen.dart';
+import '../views/screen/Profile/friend_list/friend_list_screen.dart';
 import '../views/screen/Splash/splash_screen.dart';
 
 class AppRoutes{
@@ -44,6 +46,7 @@ class AppRoutes{
   static String privacyScreen="/privacy_screen";
   static String termsScreen="/term_screen";
   static String aboutsScreen="/about_screen";
+  static String friendlistScreen="/friendList_screen";
 
 
 
@@ -69,6 +72,7 @@ class AppRoutes{
      GetPage(name:privacyScreen, page: ()=> PrivacyPoliceScreen()),
      GetPage(name:termsScreen, page: ()=> TermsOFCondititonsScreen()),
      GetPage(name:aboutsScreen, page: ()=> AboutScreen()),
+     GetPage(name:friendlistScreen, page: ()=> FriendListScreen()),
   ];
 
 

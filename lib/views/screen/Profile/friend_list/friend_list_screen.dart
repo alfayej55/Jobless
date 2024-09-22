@@ -1,6 +1,8 @@
 
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:jobless/views/screen/Profile/friend_list/friend_reques_screen.dart';
+import 'package:jobless/views/screen/Profile/friend_list/my_friends_screen.dart';
 
 import '../../../../utils/app_colors.dart';
 import '../../../../utils/app_string.dart';
@@ -49,9 +51,9 @@ class _FriendListScreenState extends State<FriendListScreen> {
               dividerColor: Colors.transparent,
               padding: EdgeInsets.zero,
               labelStyle: AppStyles.customSize(
-                size: 16,
+                size: 17,
                 fontWeight: FontWeight.w500,
-                color: AppColors.textColor,
+                color: AppColors.primaryColor,
               ),
               unselectedLabelStyle: AppStyles.customSize(
                 size: 14,
@@ -67,7 +69,8 @@ class _FriendListScreenState extends State<FriendListScreen> {
             Expanded(
               child: TabBarView(
                 children: [
-
+                  FriendRequesScreen(),
+                  MyFriendScreen()
 
                 ],
               ),
