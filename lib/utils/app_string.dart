@@ -48,6 +48,7 @@ class AppString {
   static String personalInfoText="Personal information";
   static String myFriendText=" My friends list";
   static String myGroupText=" My group list";
+  static String groupText=" My Group";
   static String settionText="Setting";
   static String logoutText="logout";
   static String myPostText="My Post";

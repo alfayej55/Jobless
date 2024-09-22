@@ -149,11 +149,14 @@ class ProfileScreen extends StatelessWidget {
             ),
 
 
+            /// My Group Screen
             SizedBox(height: 16.h),
             Customlisttile(
               title:AppString.myGroupText,
               icon: AppIcons.menuIcon,
-              onTap: (){},
+              onTap: (){
+                Get.toNamed(AppRoutes.myGroupscreen);
+              },
             ),
 
 

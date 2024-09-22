@@ -10,7 +10,8 @@ import '../../base/casess_network_image.dart';
 class MyFriendCard extends StatelessWidget {
   final Function() onTab;
    String? buttonTitle;
-   MyFriendCard({super.key,required this.onTab,this.buttonTitle});
+   String? icon;
+   MyFriendCard({super.key,required this.onTab,this.buttonTitle,this.icon});
 
   @override
   Widget build(BuildContext context) {
@@ -31,7 +32,7 @@ class MyFriendCard extends StatelessWidget {
         children: [
           Row(
             children: [
-              SvgPicture.asset(AppIcons.starIcon),
+              SvgPicture.asset(icon ??AppIcons.starIcon),
               SizedBox(width: 5,),
               Text('Full Time Student',style: AppStyles.h6(color: AppColors.subTextColor)),
             ],

@@ -3,6 +3,8 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:jobless/views/screen/Profile/friend_list/friend_reques_screen.dart';
 import 'package:jobless/views/screen/Profile/friend_list/my_friends_screen.dart';
+import 'package:jobless/views/screen/Profile/my_group/join_group_screen.dart';
+import 'package:jobless/views/screen/Profile/my_group/your_group_screen.dart';
 
 import '../../../../utils/app_colors.dart';
 import '../../../../utils/app_string.dart';
@@ -38,7 +40,7 @@ class _MyGroupScreenState extends State<MyGroupScreen> {
                   child: Icon(Icons.arrow_back_ios,size: 18,color: AppColors.textColor,)),
             ),
 
-            title: Text(AppString.friendListText,style: AppStyles.h2(
+            title: Text(AppString.groupText,style: AppStyles.h2(
               family: "Schuyler",
             )),
             backgroundColor: Colors.transparent,
@@ -69,8 +71,8 @@ class _MyGroupScreenState extends State<MyGroupScreen> {
               Expanded(
                 child: TabBarView(
                   children: [
-                    FriendRequesScreen(),
-                    MyFriendScreen()
+                    JoinGroupScreen(),
+                    YourGroupScreen()
 
                   ],
                 ),

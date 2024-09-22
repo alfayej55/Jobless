@@ -8,6 +8,7 @@ import 'package:jobless/views/screen/Home/home_screen.dart';
 import 'package:jobless/views/screen/Home/Search/search_screen.dart';
 import 'package:jobless/views/screen/Profile/friend_list/inner_widget/view_friend.dart';
 import 'package:jobless/views/screen/Profile/friend_list/my_friends_screen.dart';
+import 'package:jobless/views/screen/Profile/my_group/my_group_screen.dart';
 import 'package:jobless/views/screen/Profile/parsonal_info/personal_info_screen.dart';
 import 'package:jobless/views/screen/Profile/setting/about_screen.dart';
 import 'package:jobless/views/screen/Profile/setting/change_password_screen.dart';
@@ -49,6 +50,7 @@ class AppRoutes{
   static String aboutsScreen="/about_screen";
   static String friendlistScreen="/friendList_screen";
   static String friendRequestViewcreen="/friendRequestView_screen";
+  static String myGroupscreen="/myGroup_screen";
 
 
 
@@ -76,6 +78,7 @@ class AppRoutes{
      GetPage(name:aboutsScreen, page: ()=> AboutScreen()),
      GetPage(name:friendlistScreen, page: ()=> FriendListScreen()),
      GetPage(name:friendRequestViewcreen, page: ()=> FriendRequestViewScreen()),
+     GetPage(name:myGroupscreen, page: ()=> MyGroupScreen()),
   ];
 
 
