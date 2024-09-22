@@ -1,8 +1,10 @@
 
 
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:jobless/views/screen/Widget/my_friend_cart.dart';
 
+import '../../../../helpers/route.dart';
 import '../../Widget/friend_accept_card.dart';
 
 
@@ -17,7 +19,9 @@ class MyFriendScreen extends StatelessWidget {
         primary: false,
         itemBuilder: (context,insdex){
           return MyFriendCard(
-            onTab: (){},
+            onTab: (){
+              Get.toNamed(AppRoutes.friendRequestViewcreen);
+            },
           );
         });
   }

@@ -1,6 +1,8 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:get/get.dart';
+import 'package:jobless/helpers/route.dart';
 import 'package:jobless/utils/app_string.dart';
 
 import '../../../utils/style.dart';
@@ -17,11 +19,16 @@ class FriendAcceptCard extends StatelessWidget {
     return ListTile(
       contentPadding: EdgeInsets.zero,
       minVerticalPadding: 8.h,
-      leading:CustomNetworkImage(
-        imageUrl: "https://www.befunky.com/images/prismic/82e0e255-17f9-41e0-85f1-210163b0ea34_hero-blur-image-3.jpg?auto=avif,webp&format=jpg&width=896",
-        height: 66.h,
-        width: 64.w,
-        borderRadius: BorderRadius.circular(10.r),
+      leading:InkWell(
+        onTap: (){
+          Get.toNamed(AppRoutes.friendRequestViewcreen);
+        },
+        child: CustomNetworkImage(
+          imageUrl: "https://www.befunky.com/images/prismic/82e0e255-17f9-41e0-85f1-210163b0ea34_hero-blur-image-3.jpg?auto=avif,webp&format=jpg&width=896",
+          height: 66.h,
+          width: 64.w,
+          borderRadius: BorderRadius.circular(10.r),
+        ),
       ),
       title: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
