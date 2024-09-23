@@ -42,9 +42,7 @@ class SeeAllMember extends StatelessWidget {
           itemBuilder: (context,insdex){
             return MyFriendCard(
               onTab: (){
-
                 Get.toNamed(AppRoutes.friendprofileViewcreen);
-
               },
               buttonTitle: 'View',
               icon: AppIcons.starIcon,

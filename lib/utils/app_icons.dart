@@ -33,6 +33,7 @@ class AppIcons{
   static String uploadIcon="$baseUrl/upload_icon.svg";
   static String fileIcon="$baseUrl/file_icon.svg";
   static String sentIcon="$baseUrl/sent_icon.svg";
+  static String messageMenuIcon="$baseUrl/massage_menu_icon.svg";
 
 
 }

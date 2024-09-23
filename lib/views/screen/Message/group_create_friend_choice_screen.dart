@@ -4,7 +4,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 
-
 import '../../../utils/app_colors.dart';
 import '../../../utils/style.dart';
 import '../../base/casess_network_image.dart';

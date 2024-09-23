@@ -13,17 +13,17 @@ import '../../../utils/style.dart';
 import '../../base/casess_network_image.dart';
 import '../../base/custom_text_field.dart';
 
-class MessageInboxScreen extends StatefulWidget {
-  MessageInboxScreen({super.key});
+class GroupMessageInboxScreen extends StatefulWidget {
+  GroupMessageInboxScreen({super.key});
 
   @override
-  State<MessageInboxScreen> createState() => _MessageInboxScreenState();
+  State<GroupMessageInboxScreen> createState() => _GroupMessageInboxScreenState();
 }
 
-class _MessageInboxScreenState extends State<MessageInboxScreen> {
+class _GroupMessageInboxScreenState extends State<GroupMessageInboxScreen> {
 
   TextEditingController _msgCtrl=TextEditingController();
-  
+
   final List<String> menuOptions = ['Delete Message', 'View Profile'];
 
   var receiverId = "";
@@ -78,22 +78,10 @@ class _MessageInboxScreenState extends State<MessageInboxScreen> {
                       SizedBox(
                         width: 16.w,
                       ),
-                      Column(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          Text(
-                            'Basar Islam',
-                            style: AppStyles.h5()
-                          ),
-                          Text(
-                            "Jobless",
-                            style: AppStyles.h6(
-                                color: AppColors.dark2Color),
-                          ),
-                        ],
+                      Text(
+                          'jobless bangla community',
+                          style: AppStyles.h5()
                       ),
-
                       Expanded(
 
                         child: Align(
@@ -324,7 +312,7 @@ class _MessageInboxScreenState extends State<MessageInboxScreen> {
                     textAlign: TextAlign.start,
                   ),
                   Text(
-                       '12:10',
+                    '12:10',
                     style: TextStyle(color: Colors.white, fontSize: 12.sp),
                   ),
                 ],

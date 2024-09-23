@@ -6,6 +6,7 @@ import 'package:jobless/views/screen/Auth/signup_screen.dart';
 import 'package:jobless/views/screen/Home/feeling_post_screen.dart';
 import 'package:jobless/views/screen/Home/home_screen.dart';
 import 'package:jobless/views/screen/Home/Search/search_screen.dart';
+import 'package:jobless/views/screen/Message/group_inbox_screen.dart';
 import 'package:jobless/views/screen/Message/inbox_screen.dart';
 import 'package:jobless/views/screen/Profile/my_group/create_group.dart';
 import 'package:jobless/views/screen/Profile/my_group/inviting_people_screen.dart';
@@ -71,6 +72,7 @@ class AppRoutes{
   static String messageInboxScreen="/messageInbox_screen";
   static String messageGroupCreaateScreen="/messageGroupCreate_screen";
   static String messageGroupCreaatefriendChoiceScreen="/messageGroupCreatechoice_screen";
+  static String groupInboxScreen="/groupInbox_screen";
 
 
 
@@ -110,6 +112,7 @@ class AppRoutes{
      GetPage(name:messageGroupCreaateScreen, page: ()=> MessageGroupCreateScreen()),
      GetPage(name:messageGroupCreaateScreen, page: ()=> MessageGroupCreateScreen()),
      GetPage(name:messageGroupCreaatefriendChoiceScreen, page: ()=> GroupCreateFriendChoiceScreen()),
+     GetPage(name:groupInboxScreen, page: ()=> GroupMessageInboxScreen()),
   ];
 
 
