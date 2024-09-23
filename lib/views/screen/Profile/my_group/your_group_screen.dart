@@ -20,7 +20,7 @@ class YourGroupScreen extends StatelessWidget {
           return MyGroupRequestCard(
             onTab: (){
 
-              Get.toNamed(AppRoutes.viewGroupScreen);
+              Get.toNamed(AppRoutes.viewGroupScreen,arguments: 'group');
 
             },
             buttonTitle: 'View',

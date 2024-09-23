@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 
+import '../../../helpers/route.dart';
 import '../../../utils/app_colors.dart';
 import '../../../utils/style.dart';
 import '../../base/casess_network_image.dart';
@@ -81,7 +82,7 @@ class _GroupCreateFriendChoiceScreenState extends State<GroupCreateFriendChoiceS
             child: CustomButton(
               padding: EdgeInsets.symmetric(horizontal: 24.h,vertical: 10),
                 onTap: (){
-             // Get.toNamed(AppRoutes.messageGroupCreaatefriendChoiceScreen);
+              Get.offAllNamed(AppRoutes.messageScreen);
             }, text: 'Create Group Message'))
       ],),
     );

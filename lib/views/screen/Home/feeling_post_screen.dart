@@ -1,15 +1,20 @@
 
 
+import 'dart:io';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
+import 'package:image_picker/image_picker.dart';
 import 'package:jobless/utils/app_icons.dart';
 import 'package:jobless/utils/app_string.dart';
 import 'package:jobless/utils/style.dart';
 import 'package:jobless/views/base/custom_button.dart';
+import 'package:jobless/views/base/custom_outlinebutton.dart';
 import 'package:jobless/views/base/custom_text_field.dart';
 
+import '../../../controllers/create_post_controller.dart';
 import '../../../utils/app_colors.dart';
 import '../../base/casess_network_image.dart';
 
@@ -22,6 +27,8 @@ class FeelingPostScreen extends StatefulWidget {
 }
 
 class _FeelingPostScreenState extends State<FeelingPostScreen> {
+
+  CreatePostController _createPostCtrl=Get.put(CreatePostController());
   TextEditingController postCtrl=TextEditingController();
 
   int? _selectedValue;
@@ -45,16 +52,52 @@ class _FeelingPostScreenState extends State<FeelingPostScreen> {
               )),
         ),
         actions: [
-          CustomButton(
-            padding: EdgeInsets.symmetric(horizontal: 24),
-              height: 48.h,
-              width: 107.w,
+              CustomButton(
+            padding: EdgeInsets.symmetric(horizontal: 24.w),
+              height: 38.h,
+              width: 85.w,
               onTap: (){}, text: AppString.postText)
         ],
       ),
 
       body: Column(
         children: [
+
+
+
+          SizedBox(height: 20.h,),
+
+         Obx(()=> InkWell(
+           onTap: (){
+             showImagePickerOption(context);
+           },
+           child: Padding(
+             padding:  EdgeInsets.symmetric(horizontal: 24.w),
+             child:_createPostCtrl.imagePath.isNotEmpty? Container(
+               height: 200.h,
+               decoration: BoxDecoration(
+                 borderRadius: BorderRadius.circular(12.r),
+                 color: Color(0xffF9F6F1),
+                 border: Border.all(color:AppColors.primaryColor),
+                 image: DecorationImage(image: FileImage(
+                   File(_createPostCtrl.imagePath.value),
+                 ),fit: BoxFit.fill ),
+               ),
+
+             ): Container(
+               height:54.h,
+               width: double.infinity,
+               decoration:BoxDecoration(
+                   borderRadius: BorderRadius.circular(16.r),
+                   border: Border.all(color: AppColors.primaryColor.withOpacity(0.2))
+
+               ),
+               child: Center(child: Text('Upload Image',style: AppStyles.h5(color: AppColors.primaryColor),)),
+             ),
+           ),
+         ),),
+
+
 
           SizedBox(height: 30.h,),
           Padding(
@@ -102,10 +145,8 @@ class _FeelingPostScreenState extends State<FeelingPostScreen> {
                   ),
                 ),
               ),
-            ),
+            )),
 
-
-          )
         ],
       ),
     );
@@ -173,5 +214,67 @@ class _FeelingPostScreenState extends State<FeelingPostScreen> {
         );
       },
     );
+  }
+
+
+
+
+
+  showImagePickerOption(BuildContext context) {
+    showModalBottomSheet(
+      // backgroundColor: AppColors.AppBgColor,
+        context: context,
+        builder: (builder) {
+          return Padding(
+            padding: const EdgeInsets.all(18.0),
+            child: SizedBox(
+              width: MediaQuery.of(context).size.width,
+              height: MediaQuery.of(context).size.height / 4.2,
+              child: Row(
+                mainAxisSize: MainAxisSize.min,
+                children: [
+                  Expanded(
+                    child: InkWell(
+                      onTap: () {
+                        _createPostCtrl.pickImageFromCamera(ImageSource.gallery);
+                      },
+                      child: SizedBox(
+                        child: Column(
+                          children: [
+                            Icon(
+                              Icons.image,
+                              size: 50.w,
+                              color: AppColors.primaryColor,
+                            ),
+                            Text('Gallery')
+                          ],
+                        ),
+                      ),
+                    ),
+                  ),
+                  Expanded(
+                    child: InkWell(
+                      onTap: () {
+                        _createPostCtrl.pickImageFromCamera(ImageSource.camera);
+                      },
+                      child: SizedBox(
+                        child: Column(
+                          children: [
+                            Icon(
+                              Icons.camera_alt,
+                              size: 50.w,
+                              color: AppColors.primaryColor,
+                            ),
+                            Text('Camera')
+                          ],
+                        ),
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+            ),
+          );
+        });
   }
 }

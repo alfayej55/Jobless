@@ -15,7 +15,9 @@ import '../../../base/casess_network_image.dart';
 import '../../Widget/post_card.dart';
 
 class ViewGroupScreen extends StatelessWidget {
-  const ViewGroupScreen({super.key});
+   ViewGroupScreen({super.key});
+
+  var group=Get.arguments;
 
   @override
   Widget build(BuildContext context) {
@@ -109,7 +111,7 @@ class ViewGroupScreen extends StatelessWidget {
                     height: 30.h,
                     width: 30.w,
                     onTap: () {
-                      Get.toNamed(AppRoutes.myGroupAboutScreen);
+                    group=='group'?  Get.toNamed(AppRoutes.myGroupAboutScreen):Get.toNamed(AppRoutes.aboutGroupScreen);
                     },
                     text: AppString.aboutText,
                   )
