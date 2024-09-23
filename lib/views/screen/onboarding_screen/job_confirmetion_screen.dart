@@ -51,14 +51,15 @@ class JobConfiramScreen extends StatelessWidget {
                         width: 165.w,
                         color: Colors.white,
                         onTap: (){
-                          Get.toNamed(AppRoutes.jobCategoriScreen);
+                         Get.toNamed(AppRoutes.signUpScreen);
                         },
                         text: AppString.noText),
                     CustomButton(
                         width: 165.w,
-                        onTap: (){},
+                        onTap: (){
+                          Get.toNamed(AppRoutes.jobCategoriScreen);
+                        },
                         text: AppString.yesText),
-
 
                   ],
                 )

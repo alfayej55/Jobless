@@ -2,6 +2,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:jobless/utils/app_constants.dart';
 import 'package:jobless/utils/app_icons.dart';
 import 'package:jobless/utils/style.dart';
 import 'package:jobless/views/base/casess_network_image.dart';
@@ -10,7 +11,10 @@ import '../../../utils/app_colors.dart';
 import '../../../utils/app_image.dart';
 
 class PostCart extends StatelessWidget {
-  const PostCart({super.key});
+  
+  bool isthreeDot;
+   Function()? threeDotOnTap;
+   PostCart({super.key,this.isthreeDot=false,this.threeDotOnTap});
 
   @override
   Widget build(BuildContext context) {
@@ -47,6 +51,13 @@ class PostCart extends StatelessWidget {
 
               ],
             ),
+            trailing: isthreeDot ? InkWell(
+              onTap: threeDotOnTap,
+              child: CircleAvatar(
+                radius: 18,
+                  backgroundColor: Colors.transparent,
+                  child: SvgPicture.asset(AppIcons.threeDotIcon)),
+            ):SizedBox(),
           ),
 
           /// Post Image and post Text Section
