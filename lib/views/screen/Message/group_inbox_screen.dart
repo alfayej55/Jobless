@@ -24,7 +24,7 @@ class _GroupMessageInboxScreenState extends State<GroupMessageInboxScreen> {
 
   TextEditingController _msgCtrl=TextEditingController();
 
-  final List<String> menuOptions = ['Delete Message', 'View Profile'];
+  final List<String> menuOptions = ['Edit message group ', 'Add member','Member list','Left group'];
 
   var receiverId = "";
   var receiverName = "";
