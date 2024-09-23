@@ -102,10 +102,10 @@ class SubscriptionScreen extends StatelessWidget {
 
                     Row(
                       children: [
-                        Text('\$69.99',style: AppStyles.h2(
+                        Text('\$100.99',style: AppStyles.h2(
                           family: "Schuyler",
                         )),
-                        Text('/ Monthly',style: AppStyles.h5(
+                        Text('/ Annually ',style: AppStyles.h5(
                           family: "Schuyler",
                         )),
                       ],

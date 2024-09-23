@@ -183,13 +183,11 @@ class ProfileScreen extends StatelessWidget {
                 showCustomDialog(context);
               },
             )
-        
           ],
         ),
       ),
     );
   }
-
 }
 
 void showCustomDialog(BuildContext context) {
@@ -206,7 +204,9 @@ void showCustomDialog(BuildContext context) {
 
            CustomButton(
              width: 55,
-               onTap: (){}, text: 'Yes'),
+               onTap: (){
+               Get.offAllNamed(AppRoutes.loginScreen);
+               }, text: 'Yes'),
 
         ],
       );

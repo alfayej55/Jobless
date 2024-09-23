@@ -31,7 +31,7 @@ class SearchScreen extends StatelessWidget {
             child: CircleAvatar(
               radius: 20,
                 backgroundColor: Colors.transparent,
-                child: Icon(Icons.arrow_back_ios)),
+                child: Icon(Icons.arrow_back_ios,color: AppColors.textColor,)),
           ),
           backgroundColor: Colors.transparent,
         ),
