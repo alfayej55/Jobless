@@ -46,76 +46,79 @@ class CreateGroupScreen extends StatelessWidget {
 
       body: Padding(
         padding: EdgeInsets.symmetric(horizontal: 24.w),
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.start,
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
+        child: SingleChildScrollView(
 
-            /// Upload Picture
-            Obx(()=> Align(
-             alignment: Alignment.center,
-             child: Column(
-           mainAxisAlignment: MainAxisAlignment.center,
-           children: [
-             InkWell(
-               onTap: (){
-                 showImagePickerOption(context);
-               },
-               child:_createGroupCtrl.imagePath.isNotEmpty? Container(
-                 height: 120.h,
-                 width: 120.w,
-                 decoration: BoxDecoration(
-                   borderRadius: BorderRadius.circular(12.r),
-                   color: Color(0xffF9F6F1),
-                   border: Border.all(color:AppColors.primaryColor),
-                   image: DecorationImage(image: FileImage(
-                     File(_createGroupCtrl.imagePath.value),
-                   ),fit: BoxFit.cover ),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.start,
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+          
+              /// Upload Picture
+              Obx(()=> Align(
+               alignment: Alignment.center,
+               child: Column(
+             mainAxisAlignment: MainAxisAlignment.center,
+             children: [
+               InkWell(
+                 onTap: (){
+                   showImagePickerOption(context);
+                 },
+                 child:_createGroupCtrl.imagePath.isNotEmpty? Container(
+                   height: 120.h,
+                   width: 120.w,
+                   decoration: BoxDecoration(
+                     borderRadius: BorderRadius.circular(12.r),
+                     color: Color(0xffF9F6F1),
+                     border: Border.all(color:AppColors.primaryColor),
+                     image: DecorationImage(image: FileImage(
+                       File(_createGroupCtrl.imagePath.value),
+                     ),fit: BoxFit.cover ),
+                   ),
+          
+                 ):
+                 Container(
+                   height: 120.h,
+                   width: 120.w,
+                   decoration: BoxDecoration(
+                     borderRadius: BorderRadius.circular(12.r),
+                     color: Color(0xffC4D3F6),
+                     border: Border.all(color:AppColors.primaryColor),
+                   ),
+                   child: Center(child: SvgPicture.asset(AppIcons.uploadIcon,height: 25.h,width: 22.w,)),
                  ),
-
-               ):
-               Container(
-                 height: 120.h,
-                 width: 120.w,
-                 decoration: BoxDecoration(
-                   borderRadius: BorderRadius.circular(12.r),
-                   color: Color(0xffC4D3F6),
-                   border: Border.all(color:AppColors.primaryColor),
-                 ),
-                 child: Center(child: SvgPicture.asset(AppIcons.uploadIcon,height: 25.h,width: 22.w,)),
                ),
-             ),
-
-             SizedBox(height: 10.h,),
-             Text('upload your group image',style:AppStyles.h5()),
-           ],
-         ),
-       ),),
-
-            /// Name
-            SizedBox(height: 16.h,),
-            Text(AppString.nameText,style:AppStyles.h4(family: "Schuyler")),
-            SizedBox(height: 10.h,),
-            CustomTextField(
-                hintText: 'Group Name',
-                contentPaddingVertical: 15.h,
-                controller:nameCtrl),
-      /// Description
-
-            SizedBox(height: 16.h,),
-            Text(AppString.descriptionsText,style:AppStyles.h4(family: "Schuyler")),
-            SizedBox(height: 10.h,),
-            CustomTextField(
-                hintText: 'Here Type',
-                contentPaddingVertical: 15.h,
-                maxLine: 5,
-                controller:descriptionCtrl),
-
-            /// Create Button
-
-            SizedBox(height: 55.h,),
-            CustomButton(onTap: (){}, text: 'Create Group')
-          ],
+          
+               SizedBox(height: 10.h,),
+               Text('upload your group image',style:AppStyles.h5()),
+             ],
+           ),
+                 ),),
+          
+              /// Name
+              SizedBox(height: 16.h,),
+              Text(AppString.nameText,style:AppStyles.h4(family: "Schuyler")),
+              SizedBox(height: 10.h,),
+              CustomTextField(
+                  hintText: 'Group Name',
+                  contentPaddingVertical: 15.h,
+                  controller:nameCtrl),
+                /// Description
+          
+              SizedBox(height: 16.h,),
+              Text(AppString.descriptionsText,style:AppStyles.h4(family: "Schuyler")),
+              SizedBox(height: 10.h,),
+              CustomTextField(
+                  hintText: 'Here Type',
+                  contentPaddingVertical: 15.h,
+                  maxLine: 5,
+                  controller:descriptionCtrl),
+          
+              /// Create Button
+          
+              SizedBox(height: 55.h,),
+              CustomButton(onTap: (){}, text: 'Create Group')
+            ],
+          ),
         ),
       ),
     );

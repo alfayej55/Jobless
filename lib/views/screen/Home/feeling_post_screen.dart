@@ -60,94 +60,95 @@ class _FeelingPostScreenState extends State<FeelingPostScreen> {
         ],
       ),
 
-      body: Column(
-        children: [
+      body: SingleChildScrollView(
 
-
-
-          SizedBox(height: 20.h,),
-
-         Obx(()=> InkWell(
-           onTap: (){
-             showImagePickerOption(context);
-           },
-           child: Padding(
-             padding:  EdgeInsets.symmetric(horizontal: 24.w),
-             child:_createPostCtrl.imagePath.isNotEmpty? Container(
-               height: 200.h,
-               decoration: BoxDecoration(
-                 borderRadius: BorderRadius.circular(12.r),
-                 color: Color(0xffF9F6F1),
-                 border: Border.all(color:AppColors.primaryColor),
-                 image: DecorationImage(image: FileImage(
-                   File(_createPostCtrl.imagePath.value),
-                 ),fit: BoxFit.fill ),
+        child: Column(
+          children: [
+        
+        
+        
+            SizedBox(height: 20.h,),
+        
+           Obx(()=> InkWell(
+             onTap: (){
+               showImagePickerOption(context);
+             },
+             child: Padding(
+               padding:  EdgeInsets.symmetric(horizontal: 24.w),
+               child:_createPostCtrl.imagePath.isNotEmpty? Container(
+                 height: 200.h,
+                 decoration: BoxDecoration(
+                   borderRadius: BorderRadius.circular(12.r),
+                   color: Color(0xffF9F6F1),
+                   border: Border.all(color:AppColors.primaryColor),
+                   image: DecorationImage(image: FileImage(
+                     File(_createPostCtrl.imagePath.value),
+                   ),fit: BoxFit.fill ),
+                 ),
+        
+               ): Container(
+                 height:54.h,
+                 width: double.infinity,
+                 decoration:BoxDecoration(
+                     borderRadius: BorderRadius.circular(16.r),
+                     border: Border.all(color: AppColors.primaryColor.withOpacity(0.2))
+        
+                 ),
+                 child: Center(child: Text('Upload Image',style: AppStyles.h5(color: AppColors.primaryColor),)),
                ),
-
-             ): Container(
-               height:54.h,
-               width: double.infinity,
-               decoration:BoxDecoration(
-                   borderRadius: BorderRadius.circular(16.r),
-                   border: Border.all(color: AppColors.primaryColor.withOpacity(0.2))
-
-               ),
-               child: Center(child: Text('Upload Image',style: AppStyles.h5(color: AppColors.primaryColor),)),
              ),
-           ),
-         ),),
-
-
-
-          SizedBox(height: 30.h,),
-          Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 24),
-            child: TextField(
-              controller: postCtrl,
-              cursorColor: AppColors.subTextColor,
-             // textAlign: TextAlign.center,  // Centers the text and cursor
-              decoration: InputDecoration(
-                hintText: "What’s happening ?",
-                contentPadding: EdgeInsets.zero,
-                hintStyle: AppStyles.h6(color: AppColors.subTextColor), // Customize the hint text color
-                fillColor: Colors.transparent,
-                filled: true,
-                border: OutlineInputBorder(
-                  borderSide: BorderSide.none, // Transparent border
-                ),
-                enabledBorder: OutlineInputBorder(
-                  borderSide: BorderSide(color: Colors.transparent), // Transparent when not focused
-                ),
-                focusedBorder: OutlineInputBorder(
-                  borderSide: BorderSide(color: Colors.transparent), // Transparent when focused
-                ), // Adjust the prefix constraints to fit properly
-                prefixIcon: Padding(
-                  padding:  EdgeInsets.only(right: 10),
-                  child: CustomNetworkImage(
-                    imageUrl: "https://www.befunky.com/images/prismic/82e0e255-17f9-41e0-85f1-210163b0ea34_hero-blur-image-3.jpg?auto=avif,webp&format=jpg&width=896",
-                    height: 48.h,
-                    width: 48.w,
-                    boxShape: BoxShape.circle,
+           ),),
+        
+            SizedBox(height: 30.h,),
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 24),
+              child: TextField(
+                controller: postCtrl,
+                cursorColor: AppColors.subTextColor,
+               // textAlign: TextAlign.center,  // Centers the text and cursor
+                decoration: InputDecoration(
+                  hintText: "What’s happening ?",
+                  contentPadding: EdgeInsets.zero,
+                  hintStyle: AppStyles.h6(color: AppColors.subTextColor), // Customize the hint text color
+                  fillColor: Colors.transparent,
+                  filled: true,
+                  border: OutlineInputBorder(
+                    borderSide: BorderSide.none, // Transparent border
+                  ),
+                  enabledBorder: OutlineInputBorder(
+                    borderSide: BorderSide(color: Colors.transparent), // Transparent when not focused
+                  ),
+                  focusedBorder: OutlineInputBorder(
+                    borderSide: BorderSide(color: Colors.transparent), // Transparent when focused
+                  ), // Adjust the prefix constraints to fit properly
+                  prefixIcon: Padding(
+                    padding:  EdgeInsets.only(right: 10),
+                    child: CustomNetworkImage(
+                      imageUrl: "https://www.befunky.com/images/prismic/82e0e255-17f9-41e0-85f1-210163b0ea34_hero-blur-image-3.jpg?auto=avif,webp&format=jpg&width=896",
+                      height: 48.h,
+                      width: 48.w,
+                      boxShape: BoxShape.circle,
+                    ),
+                  ),
+                  suffixIcon: InkWell(
+                    onTap: (){
+                      postSelect(context);
+                    },
+                    child: CircleAvatar(
+                      radius: 15,
+                                   backgroundColor: Colors.transparent,
+                      child: SvgPicture.asset(
+                        AppIcons.threeDotIcon,
+                        height: 20.h,
+        
+                        color: Color(0xffC4D3F6)),
+                    ),
                   ),
                 ),
-                suffixIcon: InkWell(
-                  onTap: (){
-                    postSelect(context);
-                  },
-                  child: CircleAvatar(
-                    radius: 15,
-                                 backgroundColor: Colors.transparent,
-                    child: SvgPicture.asset(
-                      AppIcons.threeDotIcon,
-                      height: 20.h,
-
-                      color: Color(0xffC4D3F6)),
-                  ),
-                ),
-              ),
-            )),
-
-        ],
+              )),
+        
+          ],
+        ),
       ),
     );
   }

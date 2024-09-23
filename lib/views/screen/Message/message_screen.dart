@@ -21,6 +21,7 @@ class MessageScreen extends StatelessWidget {
         bottomNavigationBar: BottomMenu(2),
         appBar: AppBar(
           centerTitle: true,
+          automaticallyImplyLeading: false,
           title: Text('Message',
               style: AppStyles.h2(
                 family: "Schuyler",
