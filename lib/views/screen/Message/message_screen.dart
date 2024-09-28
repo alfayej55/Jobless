@@ -15,6 +15,12 @@ class MessageScreen extends StatelessWidget {
   MessageScreen({super.key});
 
   final TextEditingController _searchCtrl = TextEditingController();
+
+  List   imageUrls= [
+    "https://www.befunky.com/images/prismic/82e0e255-17f9-41e0-85f1-210163b0ea34_hero-blur-image-3.jpg?auto=avif,webp&format=jpg&width=896",
+    "https://www.befunky.com/images/prismic/82e0e255-17f9-41e0-85f1-210163b0ea34_hero-blur-image-3.jpg?auto=avif,webp&format=jpg&width=896",
+    "https://www.befunky.com/images/prismic/82e0e255-17f9-41e0-85f1-210163b0ea34_hero-blur-image-3.jpg?auto=avif,webp&format=jpg&width=896",
+  ];
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -104,6 +110,7 @@ class MessageScreen extends StatelessWidget {
                       onTap: () {
                         Get.toNamed(AppRoutes.messageInboxScreen);
                       },
+
                       leading: CustomNetworkImage(
                         imageUrl:
                             "https://www.befunky.com/images/prismic/82e0e255-17f9-41e0-85f1-210163b0ea34_hero-blur-image-3.jpg?auto=avif,webp&format=jpg&width=896",

@@ -24,7 +24,7 @@ class _GroupMessageInboxScreenState extends State<GroupMessageInboxScreen> {
 
   TextEditingController _msgCtrl=TextEditingController();
 
-  final List<String> menuOptions = ['Edit message group ', 'Add member','Member list','Left group'];
+  final List<String> menuOptions = ['Edit message group', 'Add member','Member list','Left group'];
 
   var receiverId = "";
   var receiverName = "";
@@ -89,7 +89,8 @@ class _GroupMessageInboxScreenState extends State<GroupMessageInboxScreen> {
                           child: PopupMenuButton<String>(
                             icon: SvgPicture.asset(AppIcons.messageMenuIcon),
                             onSelected: (value) {
-                              if (value == 'Delete Message') {
+                              if (value == 'Edit message group') {
+                                Get.toNamed(AppRoutes.editGroupNameScreen);
                                 print('Delete message');
                               } else if (value == 'View Profile') {
                                 Get.toNamed(AppRoutes.friendprofileViewcreen);

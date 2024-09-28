@@ -31,6 +31,7 @@ import 'package:jobless/views/screen/onboarding_screen/job_confirmetion_screen.d
 import 'package:jobless/views/screen/onboarding_screen/jobless_categoric_screen.dart';
 import 'package:jobless/views/screen/onboarding_screen/onboarding_screen1.dart';
 import '../views/screen/Message/create_massage_group_screen.dart';
+import '../views/screen/Message/edit_group_info_screen.dart';
 import '../views/screen/Message/group_create_friend_choice_screen.dart';
 import '../views/screen/Notification/notification_screen.dart';
 import '../views/screen/Profile/friend_list/friend_list_screen.dart';
@@ -73,6 +74,7 @@ class AppRoutes{
   static String messageGroupCreaateScreen="/messageGroupCreate_screen";
   static String messageGroupCreaatefriendChoiceScreen="/messageGroupCreatechoice_screen";
   static String groupInboxScreen="/groupInbox_screen";
+  static String editGroupNameScreen="/editGroupName_screen";
 
 
 
@@ -113,6 +115,7 @@ class AppRoutes{
      GetPage(name:messageGroupCreaateScreen, page: ()=> MessageGroupCreateScreen()),
      GetPage(name:messageGroupCreaatefriendChoiceScreen, page: ()=> GroupCreateFriendChoiceScreen()),
      GetPage(name:groupInboxScreen, page: ()=> GroupMessageInboxScreen()),
+     GetPage(name:editGroupNameScreen, page: ()=> EditMessageGroupScreen()),
   ];
 
 

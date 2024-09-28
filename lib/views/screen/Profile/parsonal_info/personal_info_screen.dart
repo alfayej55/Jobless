@@ -48,7 +48,7 @@ class _PersonalInfoScreenState extends State<PersonalInfoScreen> {
               child: Icon(Icons.arrow_back_ios,size: 18,color: AppColors.textColor,)),
         ),
 
-        title: Text(AppString.personalInfoText,style: AppStyles.customSize(
+        title: Text(AppString.profileText,style: AppStyles.customSize(
           size: 20,
           fontWeight: FontWeight.w500,
           color: AppColors.textColor,
