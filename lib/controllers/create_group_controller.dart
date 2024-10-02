@@ -7,7 +7,7 @@ import 'package:image_picker/image_picker.dart';
 
 class CreateGroupController extends GetxController{
 
-
+/// FIle add
   File? selectedIMage;
   var imagePath=''.obs;
 
@@ -16,6 +16,7 @@ class CreateGroupController extends GetxController{
     if (returnImage == null) return;
     selectedIMage = File(returnImage.path);
     imagePath.value=selectedIMage!.path;
+    //  image = File(returnImage.path).readAsBytesSync();
     //  image = File(returnImage.path).readAsBytesSync();
     update();
     print('ImagesPath:${imagePath}');
