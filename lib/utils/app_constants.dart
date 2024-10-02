@@ -3,6 +3,8 @@ import '../models/language_model.dart';
 class AppConstants{
 
   static String APP_NAME="jobless";
+  static String bearerToken="bearerToken";
+  static String userID="userID";
 
 
   // share preference Key
