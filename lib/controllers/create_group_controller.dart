@@ -19,6 +19,7 @@ class CreateGroupController extends GetxController{
     //  image = File(returnImage.path).readAsBytesSync();
     update();
     print('ImagesPath:${imagePath}');
+
     Get.back(); //
   }
 }

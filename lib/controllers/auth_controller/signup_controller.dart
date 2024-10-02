@@ -15,9 +15,9 @@ class SignupController extends GetxController{
   var imagePath=''.obs;
 
 
-
   Future pickImageFromCamera(ImageSource source) async {
     final returnImage = await ImagePicker().pickImage(source: source);
+
     if (returnImage == null) return;
     selectedIMage = File(returnImage.path);
     imagePath.value=selectedIMage!.path;
@@ -26,6 +26,7 @@ class SignupController extends GetxController{
     print('ImagesPath:${imagePath}');
     Get.back(); //
   }
+
 
   Future<void> selectDate(BuildContext context ) async {
     final DateTime? picked = await showDatePicker(

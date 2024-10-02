@@ -82,7 +82,6 @@ class HomeScreen extends StatelessWidget {
               ),
 
 
-
               /// JOb Post Section
 
            Padding(
