@@ -51,12 +51,17 @@ class HomeScreen extends StatelessWidget {
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    Container(
-                      height:48.h,
-                      width: 48.w,
-                      decoration: BoxDecoration(
-                        shape: BoxShape.circle,
-                        image: DecorationImage(image: AssetImage(AppImage.personImage)),
+                    InkWell(
+                      onTap: (){
+                        Get.toNamed(AppRoutes.personalInfoScreen);
+                      },
+                      child: Container(
+                        height:48.h,
+                        width: 48.w,
+                        decoration: BoxDecoration(
+                          shape: BoxShape.circle,
+                          image: DecorationImage(image: AssetImage(AppImage.personImage)),
+                        ),
                       ),
                     ),
                     InkWell(

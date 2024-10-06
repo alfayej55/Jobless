@@ -7,15 +7,12 @@ import 'package:socket_io_client/socket_io_client.dart';
 
 
 
-
-
 ///<------------------------- Socket Class ---------------->
 class SocketApi {
   // Factory constructor to return the same static instance every time you create an object.
   factory SocketApi() {
     return _socketApi;
   }
-
   // An internal private constructor to access it only once for the static instance of the class.
   SocketApi._internal();
 
@@ -67,8 +64,8 @@ class SocketApi {
     return completer.future;
   }
 
-  ///<------------------------- Send Message ---------------->
 
+  ///<------------------------- Send Message ---------------->
   static emit(String event, dynamic body) {
     if (body != null) {
       socket.emit(event, body);

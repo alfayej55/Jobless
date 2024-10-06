@@ -63,42 +63,85 @@ class _FeelingPostScreenState extends State<FeelingPostScreen> {
 
       body: SingleChildScrollView(
 
-        child: Column(
+        child:Obx(()=> Column(
           children: [
-        
-        
-        
             SizedBox(height: 20.h,),
-        
-           Obx(()=> InkWell(
-             onTap: (){
-               showImagePickerOption(context);
-             },
-             child: Padding(
-               padding:  EdgeInsets.symmetric(horizontal: 24.w),
-               child:_createPostCtrl.imagePath.isNotEmpty? Container(
-                 height: 200.h,
-                 decoration: BoxDecoration(
-                   borderRadius: BorderRadius.circular(12.r),
-                   color: Color(0xffF9F6F1),
-                   border: Border.all(color:AppColors.primaryColor),
-                   image: DecorationImage(image: FileImage(
-                     File(_createPostCtrl.imagePath.value),
-                   ),fit: BoxFit.fill ),
+          _createPostCtrl.type.value=='image'?  Container(
+              height: 200.h,
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(12.r),
+                color: Color(0xffF9F6F1),
+                border: Border.all(color:AppColors.primaryColor),
+                image: DecorationImage(image: FileImage(
+                  File(_createPostCtrl.imagePath.value),
+                ),fit: BoxFit.fill ),
+              ),
+
+            ):_createPostCtrl.type.value=='pdf'?
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Container(
+                    height: 35.h,
+                    width: 35.w,
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(5),
+                      border: Border.all(color: AppColors.primaryColor)
+                    ),
+                    child: Center(
+                      child: Text('Pdf',style: AppStyles.h4(color: AppColors.primaryColor),),
+
+                    ),
+                  ),
+                  SizedBox(width: 15.w,),
+                  Text('${_createPostCtrl.fileName}',style: AppStyles.h3(),),
+                ],
+              ):Container(),
+
+
+             SizedBox(height: 24.h,),
+             Row(
+             mainAxisAlignment: MainAxisAlignment.center,
+             children: [
+               InkWell(
+                 onTap: (){
+                   showImagePickerOption(context);
+                 },
+                 child: Padding(
+                   padding:  EdgeInsets.symmetric(horizontal: 24.w),
+                   child: Container(
+                     height:54.h,
+                     decoration:BoxDecoration(
+                         borderRadius: BorderRadius.circular(16.r),
+                         border: Border.all(color: AppColors.primaryColor.withOpacity(0.2))
+
+                     ),
+                     child: Padding(
+                       padding:  EdgeInsets.only(left: 10.w,right: 10.w),
+                       child: Center(child: Text('Upload Image',style: AppStyles.h5(color: AppColors.primaryColor),)),
+                     ),
+                   ),
                  ),
-        
-               ): Container(
-                 height:54.h,
-                 width: double.infinity,
-                 decoration:BoxDecoration(
-                     borderRadius: BorderRadius.circular(16.r),
-                     border: Border.all(color: AppColors.primaryColor.withOpacity(0.2))
-        
-                 ),
-                 child: Center(child: Text('Upload Image',style: AppStyles.h5(color: AppColors.primaryColor),)),
                ),
-             ),
-           ),),
+               InkWell(
+                 onTap: (){
+                   _createPostCtrl.pickPDF();
+                 },
+                 child: Container(
+                   height:54.h,
+                   decoration:BoxDecoration(
+                       borderRadius: BorderRadius.circular(16.r),
+                       border: Border.all(color: AppColors.primaryColor.withOpacity(0.2))
+
+                   ),
+                   child: Center(child: Padding(
+                     padding:  EdgeInsets.only(left: 10.w,right: 10.w),
+                     child: Text('Upload PDF',style: AppStyles.h5(color: AppColors.primaryColor),),
+                   )),
+                 ),
+               ),
+             ],
+           ),
         
             SizedBox(height: 30.h,),
             Padding(
@@ -149,8 +192,8 @@ class _FeelingPostScreenState extends State<FeelingPostScreen> {
               )),
         
           ],
-        ),
-      ),
+        )
+      )),
     );
   }
 
@@ -220,8 +263,6 @@ class _FeelingPostScreenState extends State<FeelingPostScreen> {
 
 
 
-
-
   showImagePickerOption(BuildContext context) {
     showModalBottomSheet(
       // backgroundColor: AppColors.AppBgColor,
@@ -238,7 +279,8 @@ class _FeelingPostScreenState extends State<FeelingPostScreen> {
                   Expanded(
                     child: InkWell(
                       onTap: () {
-                        _createPostCtrl.pickImageFromCamera(ImageSource.gallery);
+
+                       _createPostCtrl.pickImageFromCamera(ImageSource.gallery);
                       },
                       child: SizedBox(
                         child: Column(

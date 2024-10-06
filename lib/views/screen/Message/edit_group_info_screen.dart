@@ -102,9 +102,6 @@ class EditMessageGroupScreen extends StatelessWidget {
                 hintText: 'Group Name',
                 contentPaddingVertical: 15.h,
                 controller:nameCtrl),
-
-
-
             /// Create Button
 
             SizedBox(height: 55.h,),
